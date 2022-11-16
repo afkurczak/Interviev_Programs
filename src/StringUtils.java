@@ -1,4 +1,4 @@
-public class MyString {
+public class StringUtils {
 
     public String reverseTxt(String inputTxt) {
         String outputTxt = "";
@@ -8,5 +8,6 @@ public class MyString {
         }
         return outputTxt;
     }
+
 }
 
