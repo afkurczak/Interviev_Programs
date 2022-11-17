@@ -12,11 +12,14 @@ public class Main {
         String compTxtTest = reverseTest.reverseTxtTest(orgTxt);
         boolean check = compare.isSame(compTxt,compTxtTest);
 
-        System.out.println(compTxt);
-        System.out.println(compTxtTest);
-        System.out.println(check);
+        //System.out.println(compTxt);
+        //System.out.println(compTxtTest);
+        //System.out.println(check);
 
         //FizzBuzz.execute(100);
-        System.out.println(Factorial.factorial(3));
+
+        //System.out.println(Factorial.factorial(0));
+
+        System.out.println(TestFactorial.testFactorial(87178291200L, 14));
     }
 }
