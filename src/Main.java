@@ -8,16 +8,16 @@ public class Main {
         StringUtilsTest reverseTest = new StringUtilsTest();
 
         String compTxt = reverse.reverseTxt(orgTxt);
-        StringBuilder compTxtTest = reverseTest.reverseTxtTest(orgTxt);
+        String compTxtTestStr = reverseTest.reverseTxtTest(orgTxt);
 
         System.out.println(compTxt);
-        System.out.println(compTxtTest);
+        System.out.println(compTxtTestStr);
 
         StringUtilsTest compare = new StringUtilsTest();
-        boolean check = compare.isSame(compTxt,compTxtTest);
+        boolean check = compare.isSame(compTxt,compTxtTestStr);
         System.out.println(check);
 
-        FizzBuzz fizzbuzz = new FizzBuzz();
-        FizzBuzz.execute(100);
+       // FizzBuzz fizzbuzz = new FizzBuzz();
+        // FizzBuzz.execute(100);
     }
 }

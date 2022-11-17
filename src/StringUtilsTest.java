@@ -1,9 +1,10 @@
 public class StringUtilsTest {
-    public StringBuilder reverseTxtTest(String inputTxtTest) {
+    public String reverseTxtTest(String inputTxtTest) {
         StringBuilder outputTxtTest = new StringBuilder (inputTxtTest).reverse();
-        return outputTxtTest;
+        String outputTxtTestStr = new StringBuilder(outputTxtTest).toString();
+        return outputTxtTestStr;
     }
-    public boolean isSame(String inputTxt1, StringBuilder inputTxt2){
+    public boolean isSame(String inputTxt1, String inputTxt2){
         boolean outIsSame = inputTxt1.equals(inputTxt2);
         return outIsSame;
 
