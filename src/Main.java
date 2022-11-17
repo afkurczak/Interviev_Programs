@@ -6,18 +6,17 @@ public class Main {
 
         StringUtils reverse = new StringUtils();
         StringUtilsTest reverseTest = new StringUtilsTest();
+        StringUtilsTest compare = new StringUtilsTest();
 
         String compTxt = reverse.reverseTxt(orgTxt);
-        String compTxtTestStr = reverseTest.reverseTxtTest(orgTxt);
+        String compTxtTest = reverseTest.reverseTxtTest(orgTxt);
+        boolean check = compare.isSame(compTxt,compTxtTest);
 
         System.out.println(compTxt);
-        System.out.println(compTxtTestStr);
-
-        StringUtilsTest compare = new StringUtilsTest();
-        boolean check = compare.isSame(compTxt,compTxtTestStr);
+        System.out.println(compTxtTest);
         System.out.println(check);
 
-       // FizzBuzz fizzbuzz = new FizzBuzz();
-        // FizzBuzz.execute(100);
+        //FizzBuzz.execute(100);
+        System.out.println(Factorial.factorial(3));
     }
 }
