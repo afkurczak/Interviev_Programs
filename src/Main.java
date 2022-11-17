@@ -16,5 +16,8 @@ public class Main {
         StringUtilsTest compare = new StringUtilsTest();
         boolean check = compare.isSame(compTxt,compTxtTest);
         System.out.println(check);
+
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        FizzBuzz.execute(100);
     }
 }
