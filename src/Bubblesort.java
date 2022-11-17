@@ -1,6 +1,5 @@
 public class Bubblesort {
     public static void sort(int originalArray[], int howManyElements){
-        boolean i = true;
         int buffor = 0;
         int endSort = 0;
         do {
@@ -13,8 +12,7 @@ public class Bubblesort {
                     }else endSort++;
                 }
 
-            if (endSort == howManyElements) i = false;
-        }while (i);
+        }while (endSort != howManyElements);
 
         for (int k = 0; k<howManyElements+1; k++){
             System.out.println(originalArray[k]);
