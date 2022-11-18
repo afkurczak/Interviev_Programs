@@ -20,7 +20,8 @@ public class Main {
 
         //System.out.println(Factorial.factorial(0));
 
-        //System.out.println(TestFactorial.testFactorial(87178291500L, 14));
+        //System.out.println(TestFactorial.testFactorial());
+
         int ile = 20;
         int[] tablica = new int[ile];
         tablica[0] = 13;

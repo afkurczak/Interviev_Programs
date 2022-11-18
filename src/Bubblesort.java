@@ -1,7 +1,7 @@
 public class Bubblesort {
     public static void sort(int originalArray[], int howManyElements){
-        int buffor = 0;
-        int endSort = 0;
+        int buffor;
+        int endSort;
         do {
             endSort = 0;
             for (int j = howManyElements; j>0; j--) {
