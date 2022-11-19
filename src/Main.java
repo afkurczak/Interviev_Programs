@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class Main {
     public static void main(String[] args) {
         String orgTxt = new String("ABCDEFG");
@@ -20,7 +18,7 @@ public class Main {
 
         //System.out.println(Factorial.factorial(0));
 
-        //System.out.println(TestFactorial.testFactorial());
+        //System.out.println(FactorialTest.factorialTest());
 
         int ile = 20;
         int[] tablica = new int[ile];
