@@ -59,7 +59,7 @@ public class Menu {
         Bubblesort.sort(tablica,ile-1);
     }
     private static void MenuFactorial(){
-        System.out.println(Factorial.factorial(0));
+        System.out.println(Factorial.factorial(6));
         System.out.println(FactorialTest.factorialTest());
     }
     private static void MenuReverseText(){
