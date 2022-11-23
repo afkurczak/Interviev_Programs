@@ -4,11 +4,12 @@ public class Menu {
     public static void menuChoice (){
         Boolean menuLoop = true;
         while (menuLoop){
-            System.out.println("Select a program to run ");
+            System.out.println("Select a program to run: ");
             System.out.println("1. Bubblesort");
             System.out.println("2. FizzBuzz");
             System.out.println("3. Factorial");
             System.out.println("4. Reverse Text");
+            System.out.println("5. Guess the number");
             System.out.println("0: Exit");
 
             Scanner scanner = new Scanner(System.in);
@@ -23,6 +24,8 @@ public class Menu {
                     MenuFactorial();
                 case 4 ->
                     MenuReverseText();
+                case 5 ->
+                    GuessNumber.guessNumber();
                 case 0 ->
                     menuLoop = false;
             }
