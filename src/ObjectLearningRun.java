@@ -5,6 +5,9 @@ public class ObjectLearningRun {
         objectLearning1.objectColor = "Green"; //Dodanie argumentu do obiektu
 
         System.out.println(objectLearning.ObjectOn()); //Wyświetlam wartość dla medoty ObjectOn
+        System.out.println((objectLearning1.ObjectOn(true))); //Wyświetlanie wartości z parametrem
+
+        objectLearning.ObjectMove(); //Uruchomienie metody void
 
     }
 }
