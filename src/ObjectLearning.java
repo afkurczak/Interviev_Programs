@@ -1,5 +1,5 @@
 public class ObjectLearning {
-    final int objectLength; //nie będzie można zmienić tej wartości
+    final int objectLength; //nie będzie można zmienić tej wartości - działa jak stała
     int objectHeight;
     String objectColor;
     private int objectWeight;

@@ -9,5 +9,8 @@ public class ObjectLearningRun {
 
         objectLearning.ObjectMove(); //Uruchomienie metody void
 
+        objectLearning.setObjectWeight(15); //Setter
+        objectLearning.getObjectWeight(); //Getter
+
     }
 }
