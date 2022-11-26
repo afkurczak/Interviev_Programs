@@ -1,19 +1,19 @@
 package MyStack;
 
-public class MyStack {
+ class MyStack {
 
-    public  StackElement topElement;
+    StackElement topElement;
 
-    public  MyStack() {
+    MyStack() {
         topElement = null;
     }
 
-    public  void push(String newData) {
+    void push(String newData) {
         StackElement stackTemp = new StackElement(topElement, newData);
         topElement = stackTemp;
     }
 
-    public void pop() {
+    void pop() {
         if (topElement != null) {
             topElement = topElement.getPrevElement();
         } else {
@@ -21,7 +21,7 @@ public class MyStack {
         }
     }
 
-    public void peek() {
+    void peek() {
         if (topElement != null) {
             System.out.println(topElement.getDataElement());
         } else {
@@ -29,7 +29,7 @@ public class MyStack {
         }
     }
 
-    public void allStack(){
+    void allStack(){
         if (topElement != null) {
             StackElement stackTemp = topElement;
             while (stackTemp != null) {

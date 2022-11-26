@@ -1,10 +1,9 @@
 package MyStack;
-
 import java.util.Scanner;
 
 
 public class MenuStack {
-    public static void menuStack() {
+    static void menuStack() {
         MyStack myStack = new MyStack();
         boolean stackMenuLoop = true;
         while (stackMenuLoop){

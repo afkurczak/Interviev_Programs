@@ -1,19 +1,19 @@
 package MyStack;
 
-public class StackElement {
-    public StackElement prevElement;
-    public String dataElement;
+ class StackElement {
+    StackElement prevElement;
+    String dataElement;
 
-    public StackElement(StackElement prevElement, String dataElement) {
+    StackElement(StackElement prevElement, String dataElement) {
         this.prevElement = prevElement;
         this.dataElement = dataElement;
     }
 
-    public StackElement getPrevElement() {
+    StackElement getPrevElement() {
         return prevElement;
     }
 
-    public String getDataElement() {
+    String getDataElement() {
         return dataElement;
     }
 }
