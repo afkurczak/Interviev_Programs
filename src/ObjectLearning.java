@@ -26,7 +26,7 @@ public class ObjectLearning {
         return objectWeight;
     }
 
-    public void setObjectWeight(int objectWeight){
+    public void setObjectWeight(int objectWeight){ //Setter
         this.objectWeight = objectWeight;
     }
 
