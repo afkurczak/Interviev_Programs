@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        //Menu.menuChoice();
-        ObjectLearningRun.Run();
+        Menu.menuChoice();
+        //ObjectLearningRun.Run();
     }
 }

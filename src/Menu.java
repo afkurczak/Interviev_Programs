@@ -1,3 +1,4 @@
+import MyStack.MenuStack;
 import java.util.Scanner;
 
 public class Menu {
@@ -11,7 +12,7 @@ public class Menu {
             System.out.println("4. Reverse Text");
             System.out.println("5. Guess the number");
             System.out.println("6. Array listy");
-            System.out.println("7. Stos");
+            System.out.println("7. Stack");
             System.out.println("0: Exit");
 
             Scanner scanner = new Scanner(System.in);
@@ -31,7 +32,7 @@ public class Menu {
                 case 6 ->
                      ArrayListTest.HashMapTest();
                 case 7 ->
-                    MenuStack();
+                    MyStack.MenuStack.menuStack();
                 case 0 ->
                     menuLoop = false;
             }
@@ -82,25 +83,5 @@ public class Menu {
         System.out.println(compTxt);
         System.out.println(compTxtTest);
         System.out.println(check);
-    }
-
-    private static void MenuStack(){
-        boolean stackMenuLoop = true;
-        while (stackMenuLoop) {
-
-            System.out.println("Wybierz operację na stosie");
-            System.out.println("1. Dodaj na stos (push): ");
-            System.out.println("2. Ściągnij ze stosu (pop): ");
-            System.out.println("3. Sprawdź co jest na górze stosu (peek): ");
-            System.out.println("4. Sprawdź czy stos jest pusty: ");
-            System.out.println("0. Powrót do menu głównego");
-
-            Scanner scanner = new Scanner(System.in);
-            int stockMenuKey = scanner.nextInt();
-
-            switch (stockMenuKey) {
-                case 0 -> stackMenuLoop = false;
-            }
-        }
     }
 }
