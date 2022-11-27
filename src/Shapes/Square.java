@@ -1,25 +1,22 @@
 package Shapes;
 
 class Square implements GeometricFigure{
-    int lenght;
-    int width;
+    double length;
 
-    public Square() {
-    }
 
-    public Square(int lenght, int width) {
-        this.lenght = lenght;
-        this.width = width;
+    public Square(double length) {
+        this.length = length;
     }
 
     @Override
-    public int Circuit(int length, int width) {
-        int circuit = (2*length)+(2*width);
-        return circuit;
+    public double perimeter() {
+        double perimeter = (4*length);
+        return perimeter;
     }
 
     @Override
-    public int SurfaceArena() {
-        return 0;
+    public double surfaceArena() {
+        double surfaceArena = (length*length);
+        return surfaceArena;
     }
 }
