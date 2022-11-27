@@ -1,6 +1,21 @@
 package Shapes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainShapes {
+    public static void listShapes(){
+        List <GeometricFigure> figures = new ArrayList<>();
+
+        figures.add(new Square(3));
+        figures.add(new Rectangle(3,7));
+        figures.add(new Circle(4));
+
+        for (GeometricFigure figure: figures){
+            System.out.println(figure.perimeter());
+            System.out.println(figure.surfaceArena());
+        }
+    }
     public static void mainShapes(){
         Square square = new Square(3);
         System.out.println("Kwadrat");
