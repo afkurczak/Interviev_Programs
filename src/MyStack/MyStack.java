@@ -13,6 +13,7 @@ package MyStack;
         topElement = stackTemp;
     }
 
+
     void pop() {
         if (topElement != null) {
             topElement = topElement.getPrevElement();
@@ -21,11 +22,11 @@ package MyStack;
         }
     }
 
-    void peek() {
+    String peek() {
         if (topElement != null) {
-            System.out.println(topElement.getDataElement());
+            return (topElement.getDataElement().toString());
         } else {
-            System.out.println("Stack is Empty");
+            return ("Stack is Empty");
         }
     }
 

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 public class MenuStack {
-    static void menuStack() {
+    public static void menuStack() {
         MyStack myStack = new MyStack();
         boolean stackMenuLoop = true;
         while (stackMenuLoop){
@@ -24,7 +24,7 @@ public class MenuStack {
                     myStack.push(newData);
                 }
                 case 2 -> myStack.pop();
-                case 3 -> myStack.peek();
+                case 3 -> System.out.println(myStack.peek());
                 case 4 -> myStack.allStack();
                 case 0 -> stackMenuLoop = false;
             }

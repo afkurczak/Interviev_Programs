@@ -1,6 +1,9 @@
+import Shapes.MainShapes;
+
 public class Main {
     public static void main(String[] args) {
-        Menu.menuChoice();
+        Shapes.MainShapes.mainShapes();
+        //Menu.menuChoice();
         //ObjectLearningRun.Run();
     }
 }

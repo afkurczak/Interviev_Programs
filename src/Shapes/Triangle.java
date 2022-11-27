@@ -1,0 +1,4 @@
+package Shapes;
+
+class Triangle {
+}
