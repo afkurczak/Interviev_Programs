@@ -1,4 +1,6 @@
 package Shapes;
 
-class Triangle {
+public interface Triangle extends GeometricFigure {
+    @Override
+    double perimeter();
 }
