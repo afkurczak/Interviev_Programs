@@ -1,5 +1,7 @@
 package Shapes;
 
+import MyStack.Triangle;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +12,7 @@ public class MainShapes {
         figures.add(new Square(3));
         figures.add(new Rectangle(3,7));
         figures.add(new Circle(4));
-        figures.add(new Equilateral(4));
+        figures.add(new Triangle(3,3,3));
 
         for (GeometricFigure figure: figures){
             System.out.println(figure.perimeter());
