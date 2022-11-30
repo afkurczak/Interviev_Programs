@@ -23,6 +23,8 @@ public class Triangle implements GeometricFigure {
 
     @Override
     public double surfaceArena() {
-        return 0;
+        double halfPerimeter = perimeter() / 2;
+        double surfaceArena = Math.sqrt(halfPerimeter*(halfPerimeter-length1)*(halfPerimeter-length2)*(halfPerimeter-length3));
+        return halfPerimeter;
     }
 }
