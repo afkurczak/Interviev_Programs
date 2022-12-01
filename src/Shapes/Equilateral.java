@@ -6,7 +6,7 @@ public class Equilateral extends Triangle {
     double length;
 
     public Equilateral(double length) {
-        super(2,3,4);
+        super(length,length,length);
         this.length = length;
     }
 
