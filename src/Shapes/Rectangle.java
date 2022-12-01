@@ -1,6 +1,6 @@
 package Shapes;
 
-class Rectangle implements GeometricFigure{
+class Rectangle extends FigureWithToString{
     double length;
     double weigth;
 

@@ -1,6 +1,6 @@
 package Shapes;
 
-class Square implements GeometricFigure{
+class Square extends FigureWithToString{
     double length;
 
 

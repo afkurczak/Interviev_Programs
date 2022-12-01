@@ -2,7 +2,7 @@ package Shapes;
 
 import Shapes.GeometricFigure;
 
-public class Triangle implements GeometricFigure {
+public class Triangle extends FigureWithToString {
     public double length1;
     public double length2;
     public double length3;

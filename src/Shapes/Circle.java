@@ -1,6 +1,6 @@
 package Shapes;
 
-class Circle implements GeometricFigure{
+class Circle extends FigureWithToString{
     double radius;
 
 
