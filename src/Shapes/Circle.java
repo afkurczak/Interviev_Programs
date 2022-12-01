@@ -24,7 +24,7 @@ class Circle implements GeometricFigure{
     }
     @Override
     public String toString(){
-        String nameTriangle = ("Triangle - Surface arena= "+ surfaceArena() +" perimeter= "+perimeter());
+        String nameTriangle = ("Circle - Surface arena= "+ surfaceArena() +" / Perimeter= "+perimeter());
         return nameTriangle;
     }
 }
