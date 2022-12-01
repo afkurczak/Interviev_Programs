@@ -4,6 +4,7 @@ class Square implements GeometricFigure{
     double length;
 
 
+
     public Square(double length) {
         this.length = length;
     }

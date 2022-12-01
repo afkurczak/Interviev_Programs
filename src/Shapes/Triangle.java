@@ -1,4 +1,4 @@
-package MyStack;
+package Shapes;
 
 import Shapes.GeometricFigure;
 
@@ -6,7 +6,7 @@ public class Triangle implements GeometricFigure {
     public double length1;
     public double length2;
     public double length3;
-    public double high;
+
 
     public Triangle(double length1, double length2, double length3) {
         this.length1 = length1;

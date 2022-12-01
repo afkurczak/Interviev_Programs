@@ -4,6 +4,7 @@ class Rectangle implements GeometricFigure{
     double length;
     double weigth;
 
+
     public Rectangle(double length, double weigth) {
         this.length = length;
         this.weigth = weigth;

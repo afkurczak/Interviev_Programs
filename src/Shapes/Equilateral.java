@@ -1,9 +1,8 @@
 package Shapes;
 
-import MyStack.Triangle;
-
 public class Equilateral extends Triangle {
     double length;
+
 
     public Equilateral(double length) {
         super(length,length,length);
