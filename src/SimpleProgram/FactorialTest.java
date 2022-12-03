@@ -1,3 +1,5 @@
+package SimpleProgram;
+
 public class FactorialTest {
     private static long compareNumber = 720;
     private static int testForNumber = 6;

@@ -1,3 +1,5 @@
+package SimpleProgram;
+
 import java.util.Random;
 import java.util.Scanner;
 

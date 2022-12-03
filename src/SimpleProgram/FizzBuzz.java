@@ -1,3 +1,5 @@
+package SimpleProgram;
+
 public class FizzBuzz {
     public static void execute (int maxNumber){
         for (int i = 1; i <= maxNumber; i++){

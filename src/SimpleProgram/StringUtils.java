@@ -1,3 +1,5 @@
+package SimpleProgram;
+
 public class StringUtils {
 
     public String reverseTxt(String inputTxt) {

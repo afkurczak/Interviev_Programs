@@ -1,3 +1,5 @@
+package SimpleProgram;
+
 public class Bubblesort {
     public static void sort(int originalArray[], int howManyElements){
         int buffor;

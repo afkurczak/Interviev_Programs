@@ -1,4 +1,6 @@
-import MyStack.MenuStack;
+import Shapes.MainShapes;
+import SimpleProgram.*;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -13,6 +15,7 @@ public class Menu {
             System.out.println("5. Guess the number");
             System.out.println("6. Array listy");
             System.out.println("7. Stack");
+            System.out.println("8. Perimeter and Surface Arena");
             System.out.println("0: Exit");
 
             Scanner scanner = new Scanner(System.in);
@@ -33,6 +36,8 @@ public class Menu {
                      ArrayListTest.HashMapTest();
                 case 7 ->
                     MyStack.MenuStack.menuStack();
+                case 8 ->
+                        MainShapes.listShapes();
                 case 0 ->
                     menuLoop = false;
             }

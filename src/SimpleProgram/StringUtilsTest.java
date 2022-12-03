@@ -1,3 +1,5 @@
+package SimpleProgram;
+
 public class StringUtilsTest {
     public String reverseTxtTest(String inputTxtTest) {
         String outputTxtTest = new StringBuilder (inputTxtTest).reverse().toString();

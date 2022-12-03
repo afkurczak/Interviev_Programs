@@ -1,3 +1,5 @@
+package SimpleProgram;
+
 public class ObjectLearningRun {
     public static void Run(){
 

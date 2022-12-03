@@ -1,3 +1,5 @@
+package SimpleProgram;
+
 public class ObjectLearning {
     final int objectLength; //nie będzie można zmienić tej wartości - działa jak stała
     int objectHeight;
