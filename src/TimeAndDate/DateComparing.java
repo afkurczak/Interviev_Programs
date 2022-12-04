@@ -9,11 +9,8 @@ class DateComparing{
         return compareDay;
     }
 
-     static Duration compareDate ( LocalDate newDate, LocalDate userDate){
-        Temporal tempNewDate = newDate.adjustInto(newDate);
-        Temporal tempUserDate = userDate.adjustInto(userDate);
-
-        Duration compareData = Duration.between(tempNewDate, tempUserDate);
+     static Duration compareDate ( Temporal newDate, Temporal userDate){
+        Duration compareData = Duration.between(newDate, userDate);
 
         return compareData;
     }

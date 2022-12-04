@@ -1,6 +1,6 @@
 package TimeAndDate;
 import java.time.*;
-
+import java.time.temporal.Temporal;
 
 
 public class MainDateAndTime {
@@ -15,8 +15,9 @@ public class MainDateAndTime {
         System.out.println(nowDate);
         System.out.println(userDate);
 
-        System.out.println(DateComparing.compareDay(nowDate, userDate));
-        System.out.println(DateComparing.compareDate(nowDate,userDate));
+        //Temporal tempNowDate = nowDate.adjustInto(tempNowDate);
+
+        System.out.println(DateComparing.compareDate(nowDate.with(nowDate), userDate.with(userDate)));
 
 
     }
