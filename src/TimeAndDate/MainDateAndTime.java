@@ -14,5 +14,10 @@ public class MainDateAndTime {
         System.out.println(userTime.getHour());
         System.out.println(nowDate);
         System.out.println(userDate);
+
+        System.out.println(DateComparing.compareDay(nowDate, userDate));
+        System.out.println(DateComparing.compareDate(nowDate,userDate));
+
+
     }
 }
