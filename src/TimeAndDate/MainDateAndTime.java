@@ -1,21 +1,18 @@
 package TimeAndDate;
+import java.time.*;
 
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.util.Calendar;
-import java.util.Date;
+
 
 public class MainDateAndTime {
     public static void WriteDateAndTime() {
-        GettingDate.gettingDate();
 
-        Calendar calendar = Calendar.getInstance();
-        System.out.println(calendar.getTime());
-        //Instant instant = Instant.now();
-        //System.out.println(ZonedDateTime.now(ZoneId.of( "UTC+1" )).toString());
-        //System.out.println(ZonedDateTime.now(SimpleDateFormat("YYYY.MM.DD-HH.MM.SS")));
-        //System.out.println(instant);
+        LocalTime nowTime = LocalTime.now();
+        LocalDate nowDate = LocalDate.now();
+        LocalTime userTime = LocalTime.of(17,0,0);
+        LocalDate userDate = LocalDate.of(2022,12,24);
+        System.out.println(nowTime.getHour());
+        System.out.println(userTime.getHour());
+        System.out.println(nowDate);
+        System.out.println(userDate);
     }
 }
