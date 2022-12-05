@@ -1,7 +1,6 @@
 package TimeAndDate;
-import java.time.Duration;
 import java.time.LocalDate;
-import java.time.temporal.Temporal;
+import java.time.Period;
 
 class DateComparing{
     static int compareDay(LocalDate nowDate, LocalDate userDate){
@@ -9,10 +8,16 @@ class DateComparing{
         return compareDay;
     }
 
-     static Duration compareDate ( Temporal newDate, Temporal userDate){
-        Duration compareData = Duration.between(newDate, userDate);
+     static int[] compareDate (LocalDate nowDate, LocalDate userDate){
 
-        return compareData;
+        Period period = Period.between(nowDate, userDate);
+
+        int diffYears = Math.abs(period.getYears());
+        int diffMonth = Math.abs(period.getMonths());
+        int diffDays = Math.abs(period.getDays());
+
+        int[] differencesData={diffYears,diffMonth,diffDays};
+
+        return differencesData;
     }
-
 }
