@@ -1,6 +1,7 @@
 package TimeAndDate;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
@@ -23,10 +24,18 @@ class DateComparing {
         return diffMap;
     }
 
-    static int compareTime(LocalDate nowTime, LocalDate userTime) {
+    static Map mapComparingTime(LocalDateTime nowTime, LocalDateTime userTime) {
 
         Duration duration = Duration.between(nowTime, userTime);
-        int differencesTime = 0;
-        return differencesTime;
+        long diffHours = Math.abs(duration.toHours());
+        long diffMinutes = Math.abs(duration.toMinutes());
+        //long diffSeconds = Math.abs(duration.toSeconds());
+
+        Map <ChronoUnit, Long> diffMap = new HashMap<>();
+        diffMap.put(ChronoUnit.HOURS, diffHours);
+        diffMap.put(ChronoUnit.MINUTES, diffMinutes);
+        //diffMap.put(ChronoUnit.SECONDS, diffSeconds);
+
+        return diffMap;
     }
 }
