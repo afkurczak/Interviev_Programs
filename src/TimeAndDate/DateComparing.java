@@ -22,9 +22,9 @@ class DateComparing {
         long diffMonth = diffMonthInt.longValue();
         long diffDays = diffDaysInt.longValue();
 
-        long diffHours = Math.abs(duration.toHours());
-        long diffMinutes = Math.abs(duration.toMinutes());
-        long diffSeconds = Math.abs(duration.toHours());
+        long diffHours = Math.abs(duration.toHoursPart());
+        long diffMinutes = Math.abs(duration.toMinutesPart());
+        long diffSeconds = Math.abs(duration.toSecondsPart());
 
         Map <ChronoUnit, Long> diffMap = new HashMap<>();
         diffMap.put(ChronoUnit.YEARS, diffYears);

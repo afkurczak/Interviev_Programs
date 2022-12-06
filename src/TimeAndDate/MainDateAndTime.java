@@ -10,8 +10,8 @@ public class MainDateAndTime {
 
         LocalDateTime nowDateTime = LocalDateTime.now();
 
-        LocalDate userDate = LocalDate.of(2024,6,24);
-        LocalTime userTime = LocalTime.of(21,0,0,0);
+        LocalDate userDate = LocalDate.of(2022,12,7);
+        LocalTime userTime = LocalTime.of(23,10,0,0);
         LocalDateTime userDateTime = LocalDateTime.of(userDate, userTime);
 
         System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute()+":"+ nowDateTime.getSecond());
@@ -25,8 +25,6 @@ public class MainDateAndTime {
         System.out.println("Hours: " +diffMap.get(ChronoUnit.HOURS));
         System.out.println("Minutes: " +diffMap.get(ChronoUnit.MINUTES));
         System.out.println("Seconds: " +diffMap.get(ChronoUnit.SECONDS));
-
     }
-
 }
 
