@@ -1,8 +1,11 @@
 package TimeAndDate;
 import java.text.SimpleDateFormat;
 import java.time.*;
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 
 public class MainDateAndTime {
@@ -11,16 +14,17 @@ public class MainDateAndTime {
         LocalDateTime nowDateTime = LocalDateTime.now();
         LocalDate nowDate = LocalDate.now();
         LocalDate userDate = LocalDate.of(2022,12,24);
-        LocalTime userTime = LocalTime.of(17,00,00,00);
+        LocalTime userTime = LocalTime.of(17,0,0,0);
         LocalDateTime userDateTime = LocalDateTime.of(userDate, userTime);
 
+        System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute()+":"+ nowDateTime.getSecond());
 
-        //System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute()+":"+ nowDateTime.getSecond());
+        Map<ChronoUnit, Integer> diffMap = new HashMap(DateComparing.mapComparingTimeDate(nowDate, userDate));
 
-        System.out.print(DateComparing.compareDate(nowDate,userDate)[0]+" years ");
-        System.out.print(DateComparing.compareDate(nowDate,userDate)[1]+" months ");
-        System.out.println(DateComparing.compareDate(nowDate,userDate)[2]+" days ");
-        System.out.println("Left until Christmas ");
-
+        System.out.println("Days: " + diffMap.get(ChronoUnit.DAYS));
+        System.out.println("Months: " + diffMap.get(ChronoUnit.MONTHS));
+        System.out.println("Years: " + diffMap.get(ChronoUnit.YEARS));
     }
+
 }
+
