@@ -7,19 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 class DateComparing {
-    /*
-    static Map mapComparingTimeDate(Integer compareDateYear, Integer compareDateMonth, Integer compareDateDays) {
 
-        Map<ChronoUnit, Integer> diffMap = new HashMap<>();
-        diffMap.put(ChronoUnit.YEARS, compareDateYear);
-        diffMap.put(ChronoUnit.MONTHS, compareDateMonth);
-        diffMap.put(ChronoUnit.DAYS, compareDateDays);
-
-        return diffMap;
-    }
-    */
-
-    static Map mapComparingTimeDate(LocalDate nowDate, LocalDate userDate){
+    static Map mapComparingDate(LocalDate nowDate, LocalDate userDate){
 
         Period period = Period.between(nowDate, userDate);
         int diffYears = Math.abs(period.getYears());

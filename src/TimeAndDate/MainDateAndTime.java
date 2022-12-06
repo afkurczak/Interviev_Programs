@@ -1,10 +1,7 @@
 package TimeAndDate;
-import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.Temporal;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 
@@ -19,7 +16,7 @@ public class MainDateAndTime {
 
         System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute()+":"+ nowDateTime.getSecond());
 
-        Map<ChronoUnit, Integer> diffMap = new HashMap(DateComparing.mapComparingTimeDate(nowDate, userDate));
+        Map<ChronoUnit, Integer> diffMap = new HashMap(DateComparing.mapComparingDate(nowDate, userDate));
 
         System.out.println("Days: " + diffMap.get(ChronoUnit.DAYS));
         System.out.println("Months: " + diffMap.get(ChronoUnit.MONTHS));
