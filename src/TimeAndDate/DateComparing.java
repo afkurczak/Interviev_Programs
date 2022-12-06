@@ -1,40 +1,39 @@
 package TimeAndDate;
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Period;
+import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.Map;
 
 class DateComparing {
 
-    static Map mapComparingDate(LocalDate nowDate, LocalDate userDate){
+    static Map mapComparingDateTime(LocalDateTime nowDateTime, LocalDateTime userDateTime){
+
+        LocalDate nowDate = nowDateTime.toLocalDate();
+        LocalDate userDate = userDateTime.toLocalDate();
 
         Period period = Period.between(nowDate, userDate);
-        int diffYears = Math.abs(period.getYears());
-        int diffMonth = Math.abs(period.getMonths());
-        int diffDays = Math.abs(period.getDays());
+        Duration duration = Duration.between(nowDateTime, userDateTime);
 
-        Map <ChronoUnit, Integer> diffMap = new HashMap<>();
+        Integer diffYearsInt = Math.abs(period.getYears());
+        Integer diffMonthInt = Math.abs(period.getMonths());
+        Integer diffDaysInt = Math.abs(period.getDays());
+
+        long diffYears = diffYearsInt.longValue();
+        long diffMonth = diffMonthInt.longValue();
+        long diffDays = diffDaysInt.longValue();
+
+        long diffHours = Math.abs(duration.toHours());
+        long diffMinutes = Math.abs(duration.toMinutes());
+        long diffSeconds = Math.abs(duration.toHours());
+
+        Map <ChronoUnit, Long> diffMap = new HashMap<>();
         diffMap.put(ChronoUnit.YEARS, diffYears);
         diffMap.put(ChronoUnit.MONTHS, diffMonth);
         diffMap.put(ChronoUnit.DAYS, diffDays);
 
-        return diffMap;
-    }
-
-    static Map mapComparingTime(LocalDateTime nowTime, LocalDateTime userTime) {
-
-        Duration duration = Duration.between(nowTime, userTime);
-        long diffHours = Math.abs(duration.toHours());
-        long diffMinutes = Math.abs(duration.toMinutes());
-        //long diffSeconds = Math.abs(duration.toSeconds());
-
-        Map <ChronoUnit, Long> diffMap = new HashMap<>();
         diffMap.put(ChronoUnit.HOURS, diffHours);
         diffMap.put(ChronoUnit.MINUTES, diffMinutes);
-        //diffMap.put(ChronoUnit.SECONDS, diffSeconds);
+        diffMap.put(ChronoUnit.SECONDS, diffSeconds);
 
         return diffMap;
     }
