@@ -20,6 +20,11 @@ public class MainDateAndTime {
 
         Map<ChronoUnit, Long> diffMap = new HashMap(DateComparing.mapComparingDateTime(nowDateTime, userDateTime));
 
+        System.out.println("Difference between :");
+        System.out.println(nowDateTime);
+        System.out.println("To");
+        System.out.println(userDateTime);
+        System.out.println("Is");
         System.out.println("Years: " + diffMap.get(ChronoUnit.YEARS));
         System.out.println("Months: " + diffMap.get(ChronoUnit.MONTHS));
         System.out.println("Days: " + diffMap.get(ChronoUnit.DAYS));
