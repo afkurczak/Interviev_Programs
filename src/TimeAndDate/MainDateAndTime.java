@@ -10,8 +10,8 @@ public class MainDateAndTime {
 
         LocalDateTime nowDateTime = LocalDateTime.now();
 
-        LocalDate userDate = LocalDate.of(2022,12,7);
-        LocalTime userTime = LocalTime.of(23,10,0,0);
+        LocalDate userDate = LocalDate.of(2022,12,24);
+        LocalTime userTime = LocalTime.of(17,00,0,0);
         LocalDateTime userDateTime = LocalDateTime.of(userDate, userTime);
 
         System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute()+":"+ nowDateTime.getSecond());
@@ -20,13 +20,13 @@ public class MainDateAndTime {
 
         Map<ChronoUnit, Long> diffMap = new HashMap(DateComparing.mapComparingDateTime(nowDateTime, userDateTime));
 
-        System.out.println("Days: " + diffMap.get(ChronoUnit.DAYS));
-        System.out.println("Months: " + diffMap.get(ChronoUnit.MONTHS));
         System.out.println("Years: " + diffMap.get(ChronoUnit.YEARS));
+        System.out.println("Months: " + diffMap.get(ChronoUnit.MONTHS));
+        System.out.println("Days: " + diffMap.get(ChronoUnit.DAYS));
 
-        System.out.println("Hours: " +diffMap.get(ChronoUnit.HOURS));
-        System.out.println("Minutes: " +diffMap.get(ChronoUnit.MINUTES));
-        System.out.println("Seconds: " +diffMap.get(ChronoUnit.SECONDS));
+        System.out.print("Time remaining: " +diffMap.get(ChronoUnit.HOURS));
+        System.out.print(":" +diffMap.get(ChronoUnit.MINUTES));
+        System.out.println(":" +diffMap.get(ChronoUnit.SECONDS));
     }
 }
 
