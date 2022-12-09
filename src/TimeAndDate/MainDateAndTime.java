@@ -14,8 +14,7 @@ public class MainDateAndTime {
         LocalTime userTime = LocalTime.of(17,00,0,0);
         LocalDateTime userDateTime = LocalDateTime.of(userDate, userTime);
 
-        System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute()+":"+ nowDateTime.getSecond());
-        System.out.println(String.format(nowDateTime.toLocalTime().toString().formatted()));
+        System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute());
         System.out.println(userTime);
 
         Map<ChronoUnit, Long> diffMap = new HashMap(DateComparing.mapComparingDateTime(nowDateTime, userDateTime));
@@ -31,7 +30,7 @@ public class MainDateAndTime {
 
         System.out.print("Time remaining: " +diffMap.get(ChronoUnit.HOURS));
         System.out.print(":" +diffMap.get(ChronoUnit.MINUTES));
-        System.out.println(":" +diffMap.get(ChronoUnit.SECONDS));
+        //System.out.println(":" +diffMap.get(ChronoUnit.SECONDS));
     }
 }
 
