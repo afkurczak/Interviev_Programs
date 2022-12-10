@@ -11,13 +11,13 @@ public class MainDateAndTime {
         LocalDateTime nowDateTime = LocalDateTime.now();
 
         LocalDate userDate = LocalDate.of(2022,12,24);
-        LocalTime userTime = LocalTime.of(13,00,0,0);
+        LocalTime userTime = LocalTime.of(8,0,0,0);
         LocalDateTime userDateTime = LocalDateTime.of(userDate, userTime);
 
         System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute());
         System.out.println(userTime);
 
-        System.out.format("0%1s %n", userTime.getHour());
+        System.out.format("%02d %n", userTime.getHour());
 
         Map<ChronoUnit, Long> diffMap = new HashMap(DateComparing.mapComparingDateTime(nowDateTime, userDateTime));
 
