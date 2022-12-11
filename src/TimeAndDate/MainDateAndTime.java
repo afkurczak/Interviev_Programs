@@ -10,7 +10,7 @@ public class MainDateAndTime {
 
         LocalDateTime nowDateTime = LocalDateTime.now();
 
-        LocalDate userDate = LocalDate.of(2022,12,24);
+        LocalDate userDate = LocalDate.of(2022,2,9);
         LocalTime userTime = LocalTime.of(8,0,0,0);
         LocalDateTime userDateTime = LocalDateTime.of(userDate, userTime);
 
@@ -23,14 +23,18 @@ public class MainDateAndTime {
         System.out.println("Difference between :");
         System.out.print(nowDateTime.getYear() + ".");
         System.out.print(nowDateTime.getMonthValue() + ".");
-        System.out.print(nowDateTime.getDayOfMonth() + " / ");
+        System.out.format("%02d", nowDateTime.getDayOfMonth());
+        System.out.print(" / ");
         System.out.format("%02d", nowDateTime.getHour());
         System.out.print(":");
-        System.out.print(nowDateTime.getMinute());
+        System.out.format("%02d", nowDateTime.getMinute());
         System.out.print(" to ");
-        System.out.print(userDateTime.getYear() + ".");
-        System.out.print(userDateTime.getMonthValue() + ".");
-        System.out.print(userDateTime.getDayOfMonth() + " / ");
+        System.out.format("%02d", userDateTime.getYear());
+        System.out.print(".");
+        System.out.format("%02d", userDateTime.getMonthValue());
+        System.out.print(".");
+        System.out.format("%02d", userDateTime.getDayOfMonth());
+        System.out.print(" / ");
         System.out.format("%02d", userDateTime.getHour());
         System.out.print(":");
         System.out.format("%02d %n", userDateTime.getMinute());
@@ -39,7 +43,7 @@ public class MainDateAndTime {
         System.out.print(" Months: " + diffMap.get(ChronoUnit.MONTHS));
         System.out.print(" Days: " + diffMap.get(ChronoUnit.DAYS));
 
-        System.out.print(" Time: " +diffMap.get(ChronoUnit.HOURS));
+        System.out.print(" | Time: " +diffMap.get(ChronoUnit.HOURS));
         System.out.println(":" +diffMap.get(ChronoUnit.MINUTES));
         //System.out.println(":" +diffMap.get(ChronoUnit.SECONDS));
     }
