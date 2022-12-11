@@ -14,24 +14,33 @@ public class MainDateAndTime {
         LocalTime userTime = LocalTime.of(8,0,0,0);
         LocalDateTime userDateTime = LocalDateTime.of(userDate, userTime);
 
-        System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute());
-        System.out.println(userTime);
-
-        System.out.format("%02d %n", userTime.getHour());
+        //System.out.println(nowDateTime.getHour()+":"+ nowDateTime.getMinute());
+        //System.out.println(userTime);
+        //System.out.format("%02d %n", userTime.getHour());
 
         Map<ChronoUnit, Long> diffMap = new HashMap(DateComparing.mapComparingDateTime(nowDateTime, userDateTime));
 
         System.out.println("Difference between :");
-        System.out.println(nowDateTime);
-        System.out.println("To");
-        System.out.println(userDateTime);
-        System.out.println("Is");
-        System.out.println("Years: " + diffMap.get(ChronoUnit.YEARS));
-        System.out.println("Months: " + diffMap.get(ChronoUnit.MONTHS));
-        System.out.println("Days: " + diffMap.get(ChronoUnit.DAYS));
+        System.out.print(nowDateTime.getYear() + ".");
+        System.out.print(nowDateTime.getMonthValue() + ".");
+        System.out.print(nowDateTime.getDayOfMonth() + " / ");
+        System.out.format("%02d", nowDateTime.getHour());
+        System.out.print(":");
+        System.out.print(nowDateTime.getMinute());
+        System.out.print(" to ");
+        System.out.print(userDateTime.getYear() + ".");
+        System.out.print(userDateTime.getMonthValue() + ".");
+        System.out.print(userDateTime.getDayOfMonth() + " / ");
+        System.out.format("%02d", userDateTime.getHour());
+        System.out.print(":");
+        System.out.format("%02d %n", userDateTime.getMinute());
 
-        System.out.print("Time remaining: " +diffMap.get(ChronoUnit.HOURS));
-        System.out.print(":" +diffMap.get(ChronoUnit.MINUTES));
+        System.out.print("Years: " + diffMap.get(ChronoUnit.YEARS));
+        System.out.print(" Months: " + diffMap.get(ChronoUnit.MONTHS));
+        System.out.print(" Days: " + diffMap.get(ChronoUnit.DAYS));
+
+        System.out.print(" Time: " +diffMap.get(ChronoUnit.HOURS));
+        System.out.println(":" +diffMap.get(ChronoUnit.MINUTES));
         //System.out.println(":" +diffMap.get(ChronoUnit.SECONDS));
     }
 }
