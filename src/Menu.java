@@ -1,5 +1,6 @@
 import Shapes.MainShapes;
 import SimpleProgram.*;
+import TimeAndDate.MainDateAndTime;
 
 import java.util.Scanner;
 
@@ -16,6 +17,7 @@ public class Menu {
             System.out.println("6. Array listy");
             System.out.println("7. Stack");
             System.out.println("8. Perimeter and Surface Arena");
+            System.out.println("9. Date and Time");
             System.out.println("0: Exit");
 
             Scanner scanner = new Scanner(System.in);
@@ -23,21 +25,23 @@ public class Menu {
 
             switch (menuKey) {
                 case 1 ->
-                    MenuBubblesort();
+                        MenuBubblesort();
                 case 2 ->
-                    FizzBuzz.execute(100);
+                        FizzBuzz.execute(100);
                 case 3 ->
-                    MenuFactorial();
+                        MenuFactorial();
                 case 4 ->
-                    MenuReverseText();
+                        MenuReverseText();
                 case 5 ->
-                    GuessNumber.guessNumber();
+                        GuessNumber.guessNumber();
                 case 6 ->
-                     ArrayListTest.HashMapTest();
+                        ArrayListTest.HashMapTest();
                 case 7 ->
-                    MyStack.MenuStack.menuStack();
+                        MyStack.MenuStack.menuStack();
                 case 8 ->
                         MainShapes.listShapes();
+                case 9 ->
+                        TimeAndDate.MainDateAndTime.WriteDateAndTime();
                 case 0 ->
                     menuLoop = false;
             }
