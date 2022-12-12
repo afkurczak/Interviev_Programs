@@ -42,7 +42,7 @@ public class MainDateAndTime {
         System.out.print(" Months / ");
         System.out.format("%02d", diffMap.get(ChronoUnit.DAYS));
         System.out.print(" Days");
-        System.out.print(" | Time: ");
+        System.out.print(" | Hours and Minutes: ");
         System.out.format("%02d", diffMap.get(ChronoUnit.HOURS));
         System.out.print(":");
         System.out.format("%02d %n", diffMap.get(ChronoUnit.MINUTES));
