@@ -1,8 +1,8 @@
-
-
+import LibraryDataBase.MainLibraryDataBase;
 
 public class Main {
     public static void main(String[] args) {
-        Menu.menuChoice();
+        //Menu.menuChoice();
+        MainLibraryDataBase.MainLibraryDataBase();
     }
 }
