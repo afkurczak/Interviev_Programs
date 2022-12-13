@@ -4,80 +4,61 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Book extends Object {
-    Long bookId;
-    String bookTitle;
-    String bookIsbn;
-    LocalDate bookReleaseTime;
-    Author author;
+    private Long id;
+    private String title;
+    private String isbn;
+    private LocalDate releaseTime;
+    private Author author;
 
-    public Book(Long bookId, String bookTitle, String bookIsbn, LocalDate bookReleaseTime, Author author) {
-        this.bookId = bookId;
-        this.bookTitle = bookTitle;
-        this.bookIsbn = bookIsbn;
-        this.bookReleaseTime = bookReleaseTime;
+    Book(Long bookId, String bookTitle, String bookIsbn, LocalDate bookReleaseTime, Author author) {
+        this.id = bookId;
+        this.title = bookTitle;
+        this.isbn = bookIsbn;
+        this.releaseTime = bookReleaseTime;
         this.author = author;
     }
 
-    public Long getBookId() {
-        return bookId;
+    Long getId() {
+        return id;
     }
 
-    public void setBookId(Long bookId) {
-        this.bookId = bookId;
+    String getTitle() {
+        return title;
     }
 
-    public String getBookTitle() {
-        return bookTitle;
+    String getIsbn() {
+        return isbn;
     }
 
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
+    LocalDate getReleaseTime() {
+        return releaseTime;
     }
 
-    public String getBookIsbn() {
-        return bookIsbn;
-    }
-
-    public void setBookIsbn(String bookIsbn) {
-        this.bookIsbn = bookIsbn;
-    }
-
-    public LocalDate getBookReleaseTime() {
-        return bookReleaseTime;
-    }
-
-    public void setBookReleaseTime(LocalDate bookReleaseTime) {
-        this.bookReleaseTime = bookReleaseTime;
-    }
-
-    public Author getAuthor() {
+    Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", releaseTime=" + releaseTime +
+                ", author=" + author +
+                '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Book book)) return false;
-        return Objects.equals(bookId, book.bookId) && Objects.equals(bookTitle, book.bookTitle) && Objects.equals(bookIsbn, book.bookIsbn) && Objects.equals(bookReleaseTime, book.bookReleaseTime) && Objects.equals(author, book.author);
+        return Objects.equals(id, book.id) && Objects.equals(title, book.title) && Objects.equals(isbn, book.isbn) && Objects.equals(releaseTime, book.releaseTime) && Objects.equals(author, book.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(bookId, bookTitle, bookIsbn, bookReleaseTime, author);
+        return Objects.hash(id, title, isbn, releaseTime, author);
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "bookId=" + bookId +
-                ", bookTitle='" + bookTitle + '\'' +
-                ", bookIsbn='" + bookIsbn + '\'' +
-                ", bookReleaseTime=" + bookReleaseTime +
-                ", author=" + author +
-                '}';
-    }
 }
