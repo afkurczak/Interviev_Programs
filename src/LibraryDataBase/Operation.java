@@ -1,7 +1,9 @@
 package LibraryDataBase;
 
+import java.time.LocalDate;
+
 public interface Operation  {
-    Long add();
+    Book add(Long id, String title, String isbn, LocalDate date, Author author);
     Book getById (Long id);
 }
 
