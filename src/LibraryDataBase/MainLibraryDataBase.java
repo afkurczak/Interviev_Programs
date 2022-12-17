@@ -1,16 +1,14 @@
 package LibraryDataBase;
 
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MainLibraryDataBase implements Operation{
 
     @Override
-    public Book add(Long id, String title, String isbn, LocalDate date, Author author ) {
-        Book book = new Book(id, title, isbn, date, author);
-
-        return book;
+    public Long add(Book book ) {
+        Long bookId = 1L;
+        return bookId;
     }
 
     @Override
@@ -18,6 +16,10 @@ public class MainLibraryDataBase implements Operation{
         return null;
     }
     public static void Main(){
+        List<Book> bookDataBase = new ArrayList<>();
+        //bookDataBase.add ();
+       // bookDataBase.put(1L, MainLibraryDataBase.());
+
 
 
     }
