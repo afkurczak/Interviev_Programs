@@ -1,10 +1,7 @@
 package LibraryDataBase;
 
 
-import java.time.LocalDate;
-import java.util.*;
-
-public class OperationClass implements Operation {
+public class InMemoryDataBase implements DataBaseOperation {
     @Override
     public Long add(Book book) {
         Long bookId = 1L;
