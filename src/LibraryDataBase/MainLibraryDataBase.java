@@ -17,6 +17,7 @@ public class MainLibraryDataBase implements Operation{
     }
     public static void Main(){
         List<Book> bookDataBase = new ArrayList<>();
+        bookDataBase.add(1,new Book(1L,"dupa", "1234", LocalDate.now(), new Author("Dupa", "Dupa")));
         //bookDataBase.add ();
        // bookDataBase.put(1L, MainLibraryDataBase.());
 
