@@ -10,12 +10,15 @@ public class Book extends Object {
     private LocalDate releaseTime;
     private Author author;
 
-    Book(Long bookId, String bookTitle, String bookIsbn, LocalDate bookReleaseTime, Author author) {
-        this.id = bookId;
+    Book(String bookTitle, String bookIsbn, LocalDate bookReleaseTime, Author author) {
         this.title = bookTitle;
         this.isbn = bookIsbn;
         this.releaseTime = bookReleaseTime;
         this.author = author;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     Long getId() {
