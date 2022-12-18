@@ -13,15 +13,13 @@ public class MainLibraryDataBase implements Operation{
 
     @Override
     public Book getById(Long id) {
+
         return null;
     }
     public static void Main(){
         List<Book> bookDataBase = new ArrayList<>();
-        bookDataBase.add(1,new Book(1L,"dupa", "1234", LocalDate.now(), new Author("Dupa", "Dupa")));
-        //bookDataBase.add ();
-       // bookDataBase.put(1L, MainLibraryDataBase.());
-
-
+        bookDataBase.add(new Book(1L,"dupa", "1234", LocalDate.now(), new Author("Dupa", "Dupa")));
+        System.out.println(bookDataBase.get(0));
 
     }
 }
