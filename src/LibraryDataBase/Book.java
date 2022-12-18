@@ -48,7 +48,7 @@ public class Book extends Object {
                 ", title='" + title + '\'' +
                 ", isbn='" + isbn + '\'' +
                 ", releaseTime=" + releaseTime +
-                ", author=" + author +
+                ", author: " + author +
                 '}';
     }
 
