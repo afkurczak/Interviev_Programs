@@ -26,7 +26,7 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public Long add(Book book) {
-        if (isSameBook(book) == true) return id;
+        if (isSameBook(book)) return id;
 
         incrementId();
         book.setId(id);
@@ -38,11 +38,9 @@ public class InMemoryDataBase implements DataBaseOperation {
     public Book getById(Long id) {
         books.remove(1);
         for (Book book: books){
-            if (book.getId() == id){
-
-                System.out.println(book);
+            if (book.getId().equals(id)){
+                return book;
             }
-
         }
         return null;
     }

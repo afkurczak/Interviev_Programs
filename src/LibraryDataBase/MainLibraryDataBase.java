@@ -31,7 +31,14 @@ public class MainLibraryDataBase {
         book = new Book ("Gra o tron", "4444", LocalDate.of(1980,1,1), new Author("George","Martin"));
         db.add(book);
 
-        new InMemoryDataBase().getById(3L);
+        Long recordSearch = 2L;
+        if (db.getById(recordSearch) == null){
+            System.out.println("Empty Record");
+        }
+        else {
+            System.out.println(db.getById(recordSearch));
+        }
+
         System.out.println();
         InMemoryDataBase.allDataWrite();
 
