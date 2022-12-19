@@ -14,9 +14,9 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public Long add(Book book) {
-        books.add(book);
         Long bookId = Long.valueOf(books.size());
         book.setId(bookId);
+        books.add(book);
         return bookId;
     }
 
