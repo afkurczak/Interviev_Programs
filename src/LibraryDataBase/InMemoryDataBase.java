@@ -35,7 +35,7 @@ public class InMemoryDataBase implements DataBaseOperation {
     }
     public static String getByIdString(Long id){
         String messageWrite = null;
-        books.remove(0);
+        //books.remove(0);
 
         if (books.size()<id || books.get(id.intValue()-1).equals(null)){
             messageWrite = "Rekord poza zakresem";
