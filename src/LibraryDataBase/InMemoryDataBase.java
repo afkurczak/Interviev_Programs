@@ -33,23 +33,18 @@ public class InMemoryDataBase implements DataBaseOperation {
         books.add(book);
         return id;
     }
-    public static String getByIdString(Long id){
-        String messageWrite = null;
-        //books.remove(0);
 
-        if (books.size()<id || books.get(id.intValue()-1).equals(null)){
-            messageWrite = "Rekord poza zakresem";
-        }
-        else {
-            Book book = new InMemoryDataBase().getById(id);
-            messageWrite = (book.toString());
-        }
-        return messageWrite;
-    }
     @Override
     public Book getById(Long id) {
-        Book book = books.get(id.intValue()-1);
-        return book;
+        books.remove(1);
+        for (Book book: books){
+            if (book.getId() == id){
+
+                System.out.println(book);
+            }
+
+        }
+        return null;
     }
 
     static void allDataWrite(){
