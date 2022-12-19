@@ -19,7 +19,7 @@ public class MainLibraryDataBase {
         db.add(book);
 
 
-        Book book1 = new InMemoryDataBase().getById(2L);
+        Book book1 = new InMemoryDataBase().getById(3L);
         System.out.println(book1);
 
     }

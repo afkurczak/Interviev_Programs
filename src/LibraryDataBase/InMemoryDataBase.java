@@ -10,14 +10,19 @@ import java.util.function.IntToLongFunction;
 public class InMemoryDataBase implements DataBaseOperation {
 
     static List<Book> books = new ArrayList<>();
+    static Long Id = 0L;
 
+    private static void generateId(){
+        Id++;
+    }
 
     @Override
     public Long add(Book book) {
-        Long bookId = Long.valueOf(books.size());
-        book.setId(bookId);
+        //Long bookId = Long.valueOf(books.size());
+        InMemoryDataBase.generateId();
+        book.setId(Id);
         books.add(book);
-        return bookId;
+        return Id;
     }
 
     @Override
