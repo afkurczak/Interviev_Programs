@@ -45,10 +45,7 @@ public class MainLibraryDataBase {
             db.add(book);
         }
 
-
-        Book book1 = new InMemoryDataBase().getById(4L);
-        System.out.println(book1);
-        System.out.println();
+        System.out.println(InMemoryDataBase.getByIdString(1L));
 
         InMemoryDataBase.allDataWrite();
 
