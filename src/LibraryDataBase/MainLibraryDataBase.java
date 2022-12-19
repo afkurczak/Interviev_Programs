@@ -18,9 +18,27 @@ public class MainLibraryDataBase {
         book = new Book ("Wiedźmin", "3333", LocalDate.now(), new Author("Andrzej","Sapkowski"));
         db.add(book);
 
+        book = new Book ("Wiedźmin", "3333", LocalDate.now(), new Author("Andrzej","Sapkowski"));
+        db.add(book);
 
-        Book book1 = new InMemoryDataBase().getById(3L);
+        book = new Book ("Gra o tron", "4444", LocalDate.now(), new Author("George","Martin"));
+        db.add(book);
+
+
+        Book book1 = new InMemoryDataBase().getById(1L);
         System.out.println(book1);
+
+        book1 = new InMemoryDataBase().getById(2L);
+        System.out.println(book1);
+
+        book1 = new InMemoryDataBase().getById(3L);
+        System.out.println(book1);
+
+        book1 = new InMemoryDataBase().getById(4L);
+        System.out.println(book1);
+
+        //book1 = new InMemoryDataBase().getById(5L);
+        //System.out.println(book1);
 
     }
 }

@@ -12,13 +12,24 @@ public class InMemoryDataBase implements DataBaseOperation {
     static List<Book> books = new ArrayList<>();
     static Long id = 0L;
 
-    private static void generateId(){
+    private static void incrementId(){
         id++;
     }
 
+    private boolean isSameBook (Book book) {
+        for (Book nextBook: books) {
+            boolean ifEqual = true;
+            if (book.getIsbn().equals(nextBook.getIsbn())) return true;
+        }
+            return false;
+    }
+
+
     @Override
     public Long add(Book book) {
-        InMemoryDataBase.generateId();
+        if (isSameBook(book) == true) return id;
+
+        incrementId();
         book.setId(id);
         books.add(book);
         return id;
