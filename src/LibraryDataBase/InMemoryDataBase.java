@@ -24,7 +24,6 @@ public class InMemoryDataBase implements DataBaseOperation {
             return false;
     }
 
-
     @Override
     public Long add(Book book) {
         if (isSameBook(book) == true) return id;
@@ -39,5 +38,11 @@ public class InMemoryDataBase implements DataBaseOperation {
     public Book getById(Long id) {
         Book book = books.get(id.intValue()-1);
         return book;
+    }
+
+    static void allDataWrite(){
+        for (Book book: books){
+            System.out.println(book);
+        }
     }
 }
