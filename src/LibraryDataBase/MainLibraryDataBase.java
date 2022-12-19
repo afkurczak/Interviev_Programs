@@ -21,6 +21,9 @@ public class MainLibraryDataBase {
         book = new Book ("Wiedźmin", "3333", LocalDate.now(), new Author("Andrzej","Sapkowski"));
         db.add(book);
 
+        // book = new Book (null, null, null, null);
+        //db.add(book);
+
         book = new Book ("Gra o tron", "4444", LocalDate.now(), new Author("George","Martin"));
         db.add(book);
 
