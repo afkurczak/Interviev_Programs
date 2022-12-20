@@ -23,10 +23,17 @@ public class MainLibraryDataBase {
         book = new Book ("Wiedźmin", "83-7054-061-9", LocalDate.of(1993,1,1), new Author("Andrzej","Sapkowski"));
         db.add(book);
 
-
+        try {
         book = new Book (null, null, null, null);
         db.add(book);
 
+            if (book.getTitle() == null || book.getIsbn() == null || book.getReleaseTime() == null) {
+                throw new IllegalArgumentException();
+            }
+        }
+        catch(Exception exception){
+            System.out.println("Record cannot by null");
+        }
 
         book = new Book ("Gra o tron", "4444", LocalDate.of(1980,1,1), new Author("George","Martin"));
         db.add(book);
