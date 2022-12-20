@@ -13,7 +13,6 @@ public class InMemoryDataBase implements DataBaseOperation {
     @Override
     public Long add(Book book) {
         if (isNull(book)) return null;
-
         if (isSameBook(book)) return id;
 
         incrementId();
@@ -45,6 +44,7 @@ public class InMemoryDataBase implements DataBaseOperation {
         }
         return false;
     }
+
     private static void incrementId(){
         id++;
     }
