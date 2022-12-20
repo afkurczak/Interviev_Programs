@@ -12,8 +12,11 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public Long add(Book book) {
-        if (isNull(book)) return null;
-        if (isSameBook(book)) return id;
+        try {
+            exceptionCheck(book);
+        }catch(Exception exception){
+            System.out.println("Add Record Error");
+        }
 
         incrementId();
         book.setId(id);
@@ -38,21 +41,14 @@ public class InMemoryDataBase implements DataBaseOperation {
         }
     }
 
-    private boolean isNull(Book book) {
-        if (book.getIsbn() == null || book.getTitle() == null || book.getReleaseTime() == null || book.getAuthor() == null){
-            return true;
-        }
-        return false;
-    }
-
     private static void incrementId(){
         id++;
     }
 
-    private boolean isSameBook (Book book) {
+    private static void exceptionCheck (Book book) {
+        if (book.getTitle() == null || book.getIsbn() == null || book.getReleaseTime() == null) throw new IllegalArgumentException();
         for (Book nextBook: books) {
-            if (book.getIsbn().equals(nextBook.getIsbn())) return true;
+            if (book.getIsbn().equals(nextBook.getIsbn())) throw new IllegalArgumentException();
         }
-        return false;
     }
 }
