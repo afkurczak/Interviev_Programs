@@ -32,7 +32,7 @@ public class MainLibraryDataBase {
             //System.out.println("Empty record");
         }
         else {
-            System.out.println(db.getById(recordSearch));
+            //System.out.println(db.getById(recordSearch));
         }
 
 

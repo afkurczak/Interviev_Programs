@@ -14,19 +14,18 @@ public class InMemoryDataBase implements DataBaseOperation {
     public Long add(Book book) {
         try {
             exceptionCheck(book);
-        }catch(Exception exception){
-            System.out.println("Add Record Error");
-        }
+            incrementId();
+            book.setId(id);
+            books.add(book);
 
-        incrementId();
-        book.setId(id);
-        books.add(book);
-        return id;
+        } catch (Exception exception) {
+            System.out.println("Add Record Error");
+        }return id;
     }
 
     @Override
     public Book getById(Long id) {
-        books.remove(1);
+        //books.remove(1);
         for (Book book: books){
             if (book.getId().equals(id)){
                 return book;
