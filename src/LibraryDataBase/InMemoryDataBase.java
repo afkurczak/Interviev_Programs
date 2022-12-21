@@ -47,7 +47,13 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public List<Book> findByTitle(String title){
-        return null;
+        List <Book> listFindByTitle = new ArrayList<>();
+        for (Book book: books){
+            if (book.getTitle().equals(title)){
+                listFindByTitle.add(book);
+            }
+        }
+        return listFindByTitle;
     }
 
     @Override

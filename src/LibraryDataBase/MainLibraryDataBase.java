@@ -38,8 +38,9 @@ public class MainLibraryDataBase {
         System.out.println(db.getById(2L));
 
         System.out.println();
-        System.out.println("Find by author:");
-        db.findByAuthor(new Author("Andrzej", "Sapkowski"));
+        System.out.println("Find by title:");
+        System.out.println(db.findByTitle("Gra o tron"));
+
 
         System.out.println();
         System.out.println("All Record");
