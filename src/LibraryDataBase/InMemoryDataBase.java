@@ -1,6 +1,7 @@
 package LibraryDataBase;
 
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.IntToLongFunction;
@@ -12,20 +13,17 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public Long add(Book book) {
-        try {
             exceptionCheck(book);
             incrementId();
             book.setId(id);
             books.add(book);
-
-        } catch (Exception exception) {
-            System.out.println("Cannot add book(double ISBN)");
-        }return id;
+            return id;
     }
+
 
     @Override
     public Book getById(Long id) {
-        //books.remove(1);
+        books.remove(1);
         for (Book book: books){
             if (book.getId().equals(id)){
                 return book;

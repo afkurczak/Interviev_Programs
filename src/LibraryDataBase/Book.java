@@ -11,13 +11,13 @@ public class Book extends Object {
     private LocalDate releaseTime;
     private Author author;
 
-    Book(String bookTitle, String bookIsbn, LocalDate bookReleaseTime, Author author) {
-        this.title = bookTitle;
-        this.isbn = bookIsbn;
-        this.releaseTime = bookReleaseTime;
+    Book(String title, String isbn, LocalDate releaseTime, Author author) {
+        this.title = title;
+        this.isbn = isbn;
+        this.releaseTime = releaseTime;
         this.author = author;
 
-        if (bookTitle == null || bookIsbn == null || bookReleaseTime == null) throw new IllegalArgumentException();
+        if (title == null || isbn == null || releaseTime == null) throw new IllegalArgumentException();
 
     }
 
