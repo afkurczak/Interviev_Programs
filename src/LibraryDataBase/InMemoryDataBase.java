@@ -32,12 +32,32 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public Book findByIsbn(String isbn) {
-        for (Book nextBook : books) {
-            if (isbn.equals(nextBook.getIsbn())) {
-                return nextBook;
+        for (Book book : books) {
+            if (isbn.equals(book.getIsbn())) {
+                return book;
             }
         }
         return null;
+    }
+
+    @Override
+    public List<Book> findByAuthor(Author author){
+        return null;
+    }
+
+    @Override
+    public List<Book> findByTitle(String title){
+        return null;
+    }
+
+    @Override
+    public boolean deleteById(Long id){
+        return false;
+    }
+
+    @Override
+    public boolean updateById(Long id, Book book){
+        return false;
     }
 
     static void allDataWrite(){

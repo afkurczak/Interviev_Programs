@@ -18,7 +18,6 @@ public class Book extends Object {
         this.author = author;
 
         if (title == null || isbn == null || releaseTime == null) throw new IllegalArgumentException();
-
     }
 
     public void setId(Long id) {
