@@ -4,35 +4,34 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class MainLibraryDataBase {
+    static InMemoryDataBase db = new InMemoryDataBase();
 
-
-    public static void MainDataBase() {
-        InMemoryDataBase db = new InMemoryDataBase();
-        try{
-            List <Book> testList = new ArrayList<>();
-            testList.add(new Book("Krzyżacy", "1111", LocalDate.of(1900, 7, 1), new Author("Henryk", "Sienkiewicz")));
-            testList.add(new Book("Władca Pierścieni", "2222", LocalDate.of(1954, 7, 29), new Author("J.R.R.", "Tolkien")));
-            testList.add(new Book("Wiedźmin", "83-7054-061-9", LocalDate.of(1993, 1, 1), new Author("Andrzej", "Sapkowski")));
-            //testList.add(new Book("Wiedźmin", "83-7054-061-9", LocalDate.of(1993, 1, 1), new Author("Andrzej", "Sapkowski")));
-            //testList.add(new Book(null, null, null, null));
-            testList.add(new Book("Gra o tron", "4444", LocalDate.of(1980, 1, 1), new Author("George", "Martin")));
-
-        for (Book book: testList){
-            db.add(book);}
-
-        } catch (Exception exception) {
+    private static Long createBookAndAdd (String title, String isbn, LocalDate releaseDate, String firstName, String lastName){
+       Book book;
+        try {
+           book = new Book(title, isbn, releaseDate, new Author(firstName, lastName));
+            db.add(book);
+        }catch(IllegalArgumentException e){
             System.out.println("Cannot add book");
+            return null;
         }
-
+        return book.getId();
+    }
+    public static void MainDataBase() {
+        createBookAndAdd("Krzyżacy", "1111", LocalDate.of(1900, 7, 1), "Henryk", "Sienkiewicz");
+        createBookAndAdd("Władca Pierścieni", "2222", LocalDate.of(1954, 7, 29), "J.R.R.", "Tolkien");
+        createBookAndAdd("Wiedźmin", "83-7054-061-9", LocalDate.of(1993, 1, 1), "Andrzej", "Sapkowski");
+        createBookAndAdd("Wiedźmin", "83-7054-061-9", LocalDate.of(1993, 1, 1), "Andrzej", "Sapkowski");
+        createBookAndAdd(null, null, null, null, null);
+        createBookAndAdd("Gra o tron", "4444", LocalDate.of(1980, 1, 1), "George", "Martin");
 
         Long recordSearch = 2L;
         if (db.getById(recordSearch) == null){
-            System.out.println("Empty record");
+           // System.out.println("Empty record");
         }
         else {
-            System.out.println(db.getById(recordSearch));
+            //System.out.println(db.getById(recordSearch));
         }
-
 
         System.out.println();
         InMemoryDataBase.allDataWrite();

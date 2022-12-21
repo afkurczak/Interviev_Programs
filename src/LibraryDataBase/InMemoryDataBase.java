@@ -4,7 +4,7 @@ package LibraryDataBase;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.IntToLongFunction;
+
 
 public class InMemoryDataBase implements DataBaseOperation {
 
@@ -20,10 +20,9 @@ public class InMemoryDataBase implements DataBaseOperation {
             return id;
     }
 
-
     @Override
     public Book getById(Long id) {
-        books.remove(1);
+        //books.remove(1);
         for (Book book: books){
             if (book.getId().equals(id)){
                 return book;
