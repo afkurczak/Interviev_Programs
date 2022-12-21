@@ -27,8 +27,12 @@ public class MainLibraryDataBase {
         createBookAndAdd("Gra o tron", "4444", LocalDate.of(1980, 1, 1), "George", "Martin");
 
         System.out.println();
-        System.out.println("Find By Isbn:");
+        System.out.println("Find by isbn:");
         System.out.println(db.findByIsbn("2222"));
+
+        System.out.println();
+        System.out.println("Get by id");
+        System.out.println(db.getById(2L));
 
 
         System.out.println();

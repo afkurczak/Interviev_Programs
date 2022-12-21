@@ -5,5 +5,8 @@ public interface DataBaseOperation {
     Book getById (Long id);
     Book findByIsbn (String isbn);
 
+
+
+
 }
 
