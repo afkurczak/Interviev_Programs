@@ -19,7 +19,7 @@ public class InMemoryDataBase implements DataBaseOperation {
             books.add(book);
 
         } catch (Exception exception) {
-            System.out.println("Add Record Error");
+            System.out.println("Cannot add book(double ISBN)");
         }return id;
     }
 
@@ -45,7 +45,6 @@ public class InMemoryDataBase implements DataBaseOperation {
     }
 
     private static void exceptionCheck (Book book) {
-        if (book.getTitle() == null || book.getIsbn() == null || book.getReleaseTime() == null) throw new IllegalArgumentException();
         for (Book nextBook: books) {
             if (book.getIsbn().equals(nextBook.getIsbn())) throw new IllegalArgumentException();
         }
