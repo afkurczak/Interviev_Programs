@@ -11,6 +11,7 @@ public class MainLibraryDataBase {
         try {
            book = new Book(title, isbn, releaseDate, new Author(firstName, lastName));
             db.add(book);
+            System.out.println(book);
         }catch(IllegalArgumentException e){
             System.out.println("Cannot add book");
             return null;
@@ -25,10 +26,13 @@ public class MainLibraryDataBase {
         createBookAndAdd(null, null, null, null, null);
         createBookAndAdd("Gra o tron", "4444", LocalDate.of(1980, 1, 1), "George", "Martin");
 
+        System.out.println();
+        System.out.println("Find By Isbn:");
         System.out.println(db.findByIsbn("2222"));
 
 
         System.out.println();
+        System.out.println("All Record");
         InMemoryDataBase.allDataWrite();
 
     }
