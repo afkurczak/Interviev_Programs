@@ -39,8 +39,18 @@ public class MainLibraryDataBase {
 
         System.out.println();
         System.out.println("Find by title:");
-        System.out.println(db.findByTitle("Gra o tron"));
+        for (Book bookFindByTitle: db.findByTitle("Gra o tron")) {
+            System.out.println(bookFindByTitle);
+        }
 
+        System.out.println();
+        System.out.println("Find by author:");
+        for (Book bookFindByAuthor: db.findByAuthor(new Author("J.R.R.", "Tolkien"))) {
+            System.out.println(bookFindByAuthor);
+        }
+
+        System.out.println();
+        System.out.println("Delete: "+ db.deleteById(2L));
 
         System.out.println();
         System.out.println("All Record");

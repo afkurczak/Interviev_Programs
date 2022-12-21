@@ -42,7 +42,13 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public List<Book> findByAuthor(Author author){
-        return null;
+        List <Book> listFindByAuthor = new ArrayList<>();
+        for (Book book: books){
+            if (book.getAuthor().equals(author)) {
+                listFindByAuthor.add(book);
+            }
+        }
+        return listFindByAuthor;
     }
 
     @Override
@@ -57,8 +63,14 @@ public class InMemoryDataBase implements DataBaseOperation {
     }
 
     @Override
-    public boolean deleteById(Long id){
-        return false;
+    public boolean deleteById(Long id) {
+        for (Book book : books) {
+            if (book.getId().equals(id)) {
+                books.remove(book);
+                return true;
+            }
+        }
+            return false;
     }
 
     @Override
