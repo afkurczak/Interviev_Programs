@@ -25,13 +25,8 @@ public class MainLibraryDataBase {
         createBookAndAdd(null, null, null, null, null);
         createBookAndAdd("Gra o tron", "4444", LocalDate.of(1980, 1, 1), "George", "Martin");
 
-        Long recordSearch = 2L;
-        if (db.getById(recordSearch) == null){
-           // System.out.println("Empty record");
-        }
-        else {
-            //System.out.println(db.getById(recordSearch));
-        }
+        System.out.println(db.findByIsbn("2222"));
+
 
         System.out.println();
         InMemoryDataBase.allDataWrite();

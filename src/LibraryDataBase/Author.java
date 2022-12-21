@@ -6,8 +6,10 @@ public class Author {
 
     public Author(String firstName, String lastName) {
 
-            this.firstName = firstName;
-            this.lastName = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        if (firstName == null || lastName == null) throw new IllegalArgumentException();
 
     }
 

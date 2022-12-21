@@ -22,10 +22,19 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public Book getById(Long id) {
-        //books.remove(1);
         for (Book book: books){
             if (book.getId().equals(id)){
                 return book;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Book findByIsbn(String isbn) {
+        for (Book nextBook : books) {
+            if (isbn.equals(nextBook.getIsbn())) {
+                return nextBook;
             }
         }
         return null;
