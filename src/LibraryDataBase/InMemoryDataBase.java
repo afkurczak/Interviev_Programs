@@ -79,17 +79,16 @@ public class InMemoryDataBase implements DataBaseOperation {
         boolean changePermission = false;
 
         for (Book nextBook: books) {
-            if (book.getIsbn().equals(nextBook.getIsbn()) &! nextBook.getId().equals(id))
+            if (book.getIsbn().equals(nextBook.getIsbn()) &! nextBook.getId().equals(id)) {
                 throw new IllegalArgumentException();
-        }
+            }
 
-        for (Book book1 : books) {
-            if (book1.getId().equals(id)) {
-                searchId = books.indexOf(book1);
+            if (nextBook.getId().equals(id)) {
+                searchId = books.indexOf(nextBook);
                 changePermission = true;
-                break;
             }
         }
+
         if (changePermission) {
             book.setId(id);
             books.set(searchId, book);
