@@ -86,7 +86,6 @@ public class InMemoryDataBase implements DataBaseOperation {
         for (Book book1 : books) {
             if (book1.getId().equals(id)) {
                 searchId = books.indexOf(book1);
-                System.out.println(searchId);
                 changePermission = true;
                 break;
             }
