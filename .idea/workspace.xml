@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="523a7e44-f0a5-461e-9770-ceff935d807f" name="Changes" comment="Add deleteById method" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2HdfhptL76GcxBlKwJJ8eDgHqZF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Interviev_Programs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="523a7e44-f0a5-461e-9770-ceff935d807f" name="Changes" comment="" />
+      <created>1668620003580</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668620003580</updated>
+    </task>
+    <task id="LOCAL-00060" summary="String Format test">
+      <created>1670783258451</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1670783258452</updated>
+    </task>
+    <task id="LOCAL-00061" summary="String Format test">
+      <created>1670784682413</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1670784682413</updated>
+    </task>
+    <task id="LOCAL-00062" summary="String Format test">
+      <created>1670786600342</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1670786600342</updated>
+    </task>
+    <task id="LOCAL-00063" summary="String Format test">
+      <created>1670865405130</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1670865405130</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Create Library Data Base Package">
+      <created>1670965456629</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1670965456630</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Create Book Class">
+      <created>1670966464544</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1670966464544</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Book Class - change name od parameters, delete setters">
+      <created>1670967546947</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1670967546947</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Create Author Class">
+      <created>1671042686551</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1671042686551</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Create Operation Interface">
+      <created>1671138759592</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1671138759592</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Create method add">
+      <created>1671139641991</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1671139641991</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Create method add">
+      <created>1671214390869</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1671214390869</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Create method add">
+      <created>1671308737706</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1671308737706</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Create method add">
+      <created>1671312509465</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1671312509465</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Test use method add">
+      <created>1671397712260</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1671397712260</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Test use method add">
+      <created>1671400532481</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1671400532481</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Test use method add">
+      <created>1671401112682</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1671401112682</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Add OperationClass">
+      <created>1671401724522</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1671401724522</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Change name of class">
+      <created>1671402238187</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1671402238187</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Working Add and getById Method">
+      <created>1671406543161</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1671406543161</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Working Add and getById Method ver. 0,2">
+      <created>1671407015856</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1671407015856</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Working Add and getById Method ver. 0,3">
+      <created>1671408039074</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1671408039074</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Working Add and getById Method ver. 0,3">
+      <created>1671408164389</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1671408164389</updated>
+    </task>
+    <task id="LOCAL-00082" summary="add generateID method">
+      <created>1671409120544</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1671409120544</updated>
+    </task>
+    <task id="LOCAL-00083" summary="add generateID method">
+      <created>1671409239089</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1671409239089</updated>
+    </task>
+    <task id="LOCAL-00084" summary="add isSameBook method">
+      <created>1671413698139</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1671413698139</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Test ver. 0.1">
+      <created>1671415224407</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1671415224407</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Add allDataWrite method">
+      <created>1671415936066</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1671415936066</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Add null check">
+      <created>1671417032601</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1671417032602</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Add null check">
+      <created>1671420812568</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1671420812568</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Add null check">
+      <created>1671420847127</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1671420847127</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Delete shit programs">
+      <created>1671491481893</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1671491481893</updated>
+    </task>
+    <task id="LOCAL-00091" summary="getById search and null">
+      <created>1671492499906</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1671492499906</updated>
+    </task>
+    <task id="LOCAL-00092" summary="getById search and null">
+      <created>1671493637566</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1671493637566</updated>
+    </task>
+    <task id="LOCAL-00093" summary="getById search and null">
+      <created>1671499296092</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1671499296092</updated>
+    </task>
+    <task id="LOCAL-00094" summary="IllegalArgumentException for null book record">
+      <created>1671574923897</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1671574923898</updated>
+    </task>
+    <task id="LOCAL-00095" summary="IllegalArgumentException for null book record">
+      <created>1671579528360</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1671579528360</updated>
+    </task>
+    <task id="LOCAL-00096" summary="IllegalArgumentException for null book record">
+      <created>1671579743849</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1671579743849</updated>
+    </task>
+    <task id="LOCAL-00097" summary="IllegalArgumentException for null book record">
+      <created>1671581175944</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1671581175944</updated>
+    </task>
+    <task id="LOCAL-00098" summary="IllegalArgumentException for null book record">
+      <created>1671581589823</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1671581589823</updated>
+    </task>
+    <task id="LOCAL-00099" summary="IllegalArgumentException for null book record">
+      <created>1671590534922</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1671590534922</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Create Book And Add method add">
+      <created>1671592096969</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1671592096969</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Add findByIsbn method and interface">
+      <created>1671592955473</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1671592955473</updated>
+    </task>
+    <task id="LOCAL-00102" summary="Add findByIsbn method and interface">
+      <created>1671593178250</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1671593178250</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Use and test all created method">
+      <created>1671593444190</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1671593444190</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Use and test all created method">
+      <created>1671595914045</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1671595914045</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Add findByTitle method">
+      <created>1671642905468</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1671642905469</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Add deleteById method">
+      <created>1671665325421</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1671665325422</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Add deleteById method">
+      <created>1671668958677</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1671668958677</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Add deleteById method">
+      <created>1671678575823</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1671678575823</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create Library Data Base Package" />
+    <MESSAGE value="Create Book Class" />
+    <MESSAGE value="Book Class - change name od parameters, delete setters" />
+    <MESSAGE value="Create Author Class" />
+    <MESSAGE value="Create Operation Interface" />
+    <MESSAGE value="Create method add" />
+    <MESSAGE value="Test use method add" />
+    <MESSAGE value="Add OperationClass" />
+    <MESSAGE value="Change name of class" />
+    <MESSAGE value="Working Add and getById Method" />
+    <MESSAGE value="Working Add and getById Method ver. 0,2" />
+    <MESSAGE value="Working Add and getById Method ver. 0,3" />
+    <MESSAGE value="add generateID method" />
+    <MESSAGE value="add isSameBook method" />
+    <MESSAGE value="Test ver. 0.1" />
+    <MESSAGE value="Add allDataWrite method" />
+    <MESSAGE value="Add null check" />
+    <MESSAGE value="Delete shit programs" />
+    <MESSAGE value="getById search and null" />
+    <MESSAGE value="IllegalArgumentException for null book record" />
+    <MESSAGE value="Create Book And Add method add" />
+    <MESSAGE value="Add findByIsbn method and interface" />
+    <MESSAGE value="Use and test all created method" />
+    <MESSAGE value="Add findByTitle method" />
+    <MESSAGE value="Add deleteById method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add deleteById method" />
+  </component>
+</project>
