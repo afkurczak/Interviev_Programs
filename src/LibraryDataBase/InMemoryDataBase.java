@@ -74,12 +74,21 @@ public class InMemoryDataBase implements DataBaseOperation {
     }
 
     @Override
-    public boolean updateById(Long id, Book book){
-        exceptionCheck(book);
-        deleteById(id);
-        book.setId(id);
-        books.add(book);
-        return true;
+    public boolean updateById(Long id, Book book) {
+        Long searchId = 0L;
+        for (Book book1 : books) {
+            if (book1.getId().equals(id)) {
+                searchId = book1.getId();
+                System.out.println("dupa");
+                break;
+            }
+        }
+        if (searchId>0) {
+            book.setId(id);
+            books.set(searchId.intValue() - 1, book);
+            return true;
+        }
+        return false;
     }
 
     static void allDataWrite(){

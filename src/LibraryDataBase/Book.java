@@ -24,6 +24,22 @@ public class Book extends Object {
         this.id = id;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public void setReleaseTime(LocalDate releaseTime) {
+        this.releaseTime = releaseTime;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
     Long getId() {
         return id;
     }
