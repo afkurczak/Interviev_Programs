@@ -1,10 +1,8 @@
-import LibraryDataBase.Author;
-import LibraryDataBase.Book;
-import LibraryDataBase.DataBaseOperation;
+package LibraryDataBase;
 
 import java.util.List;
 
-public class InFileDataBase implements DataBaseOperation {
+public class InFileDataBase implements DataBaseOperation{
 
     @Override
     public Long add(Book book) {
