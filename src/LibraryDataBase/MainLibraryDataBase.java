@@ -52,13 +52,13 @@ public class MainLibraryDataBase {
         System.out.println();
         System.out.println("Delete: "+ db.deleteById(6L));
 
-        //try {
+        try {
             System.out.println();
             System.out.print("Update: ");
-            System.out.println(db.updateById(6L, new Book("Gra o zgon", "4447", LocalDate.of(1980, 1, 1), new Author("George", "Martin"))));
-       // }catch (IllegalArgumentException e){
-            //System.out.println("ISBN exist in another record, cannot update the book ");
-       // }
+            System.out.println(db.updateById(7L, new Book("Gra o zgon", "2222", LocalDate.of(1980, 1, 1), new Author("George", "Martin"))));
+        }catch (IllegalArgumentException e){
+            System.out.println("ISBN exist in another record, cannot update the book ");
+        }
 
         System.out.println();
         System.out.println("All Record");

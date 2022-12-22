@@ -75,17 +75,25 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public boolean updateById(Long id, Book book) {
-        Long searchId = 0L;
+        int searchId = 0;
+        boolean changePermission = false;
+
+        for (Book nextBook: books) {
+            if (book.getIsbn().equals(nextBook.getIsbn()) &! nextBook.getId().equals(id))
+                throw new IllegalArgumentException();
+        }
+
         for (Book book1 : books) {
             if (book1.getId().equals(id)) {
-                searchId = book1.getId();
-                System.out.println("dupa");
+                searchId = books.indexOf(book1);
+                System.out.println(searchId);
+                changePermission = true;
                 break;
             }
         }
-        if (searchId>0) {
+        if (changePermission) {
             book.setId(id);
-            books.set(searchId.intValue() - 1, book);
+            books.set(searchId, book);
             return true;
         }
         return false;
