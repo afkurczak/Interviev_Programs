@@ -75,7 +75,11 @@ public class InMemoryDataBase implements DataBaseOperation {
 
     @Override
     public boolean updateById(Long id, Book book){
-        return false;
+        exceptionCheck(book);
+        deleteById(id);
+        book.setId(id);
+        books.add(book);
+        return true;
     }
 
     static void allDataWrite(){

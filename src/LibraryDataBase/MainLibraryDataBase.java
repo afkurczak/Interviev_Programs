@@ -53,6 +53,10 @@ public class MainLibraryDataBase {
         System.out.println("Delete: "+ db.deleteById(2L));
 
         System.out.println();
+        System.out.println("Update: ");
+        db.updateById(6L, new Book("Gra o zgon", "4544", LocalDate.of(1980, 1, 1), new Author("George", "Martin")));
+
+        System.out.println();
         System.out.println("All Record");
         InMemoryDataBase.allDataWrite();
 
