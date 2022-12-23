@@ -1,13 +1,21 @@
 package LibraryDataBase;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CsvOperation {
+     static String fileName = ("DataBase.csv");
 
     public static void insert(Book book){
-        System.out.println(book);
+        try {
+            PrintWriter write = new PrintWriter(fileName);
+            write.println("dupa");
+            write.close();
+        }catch (FileNotFoundException ex){
+            System.out.println("File write error");
+        }
     }
 
     public static void push(List<Book> books){
