@@ -1,10 +1,7 @@
 package LibraryDataBase;
 
-import com.sun.jdi.Value;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.IntToLongFunction;
 
 public class InFileDataBase implements DataBaseOperation{
 
@@ -68,20 +65,45 @@ public class InFileDataBase implements DataBaseOperation{
 
     @Override
     public boolean deleteById(Long id) {
+        List <Book> books = new ArrayList<>();
+        books.addAll(new CsvOperation().pull());
+        for (Book book: books) {
+            if (book.getId().equals(id)) {
+                books.remove(id);
+                CsvOperation.push(books);
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
     public boolean updateById(Long id, Book book) {
+        int searchId = 0;
+        boolean changePermission = false;
+        List <Book> books = new ArrayList<>();
+        books.addAll(new CsvOperation().pull());
+
+        for (Book nextBook: books) {
+            if (book.getIsbn().equals(nextBook.getIsbn()) &! nextBook.getId().equals(id)) {
+                throw new IllegalArgumentException();
+            }
+
+            if (nextBook.getId().equals(id)) {
+                searchId = books.indexOf(nextBook);
+                changePermission = true;
+            }
+        }
+
+        if (changePermission) {
+            book.setId(id);
+            books.set(searchId, book);
+            CsvOperation.push(books);
+            return true;
+        }
         return false;
     }
 
-    private void exceptionCheck(Book book){
-        List <Book> books = new ArrayList<>();
-        books.addAll(new CsvOperation().pull());
-        for (Book nextBook: books) {
-            if (book.getIsbn().equals(nextBook.getIsbn())) throw new IllegalArgumentException();
-        }
-    }
-
 }
+
+
