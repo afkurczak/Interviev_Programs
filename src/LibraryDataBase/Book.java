@@ -20,6 +20,16 @@ public class Book extends Object {
         if (title == null || isbn == null || releaseTime == null) throw new IllegalArgumentException();
     }
 
+    Book(Long id, String title, String isbn, LocalDate releaseTime, Author author) {
+        this.id = id;
+        this.title = title;
+        this.isbn = isbn;
+        this.releaseTime = releaseTime;
+        this.author = author;
+
+        if (title == null || isbn == null || releaseTime == null) throw new IllegalArgumentException();
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
