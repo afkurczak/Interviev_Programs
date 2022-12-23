@@ -13,5 +13,8 @@ public class MainCsvDataBase {
         }catch (IllegalArgumentException e){
             System.out.println("ISBN Double - cannot add record");
         }
+        System.out.println("Find by ISBN: " + db.findByIsbn("2221"));
+        System.out.println("Find by author: " + db.findByAuthor(new Author("Henryk", "Sienkiewicz")));
+        System.out.println("Find by Title: " + db.findByTitle("Metro 2033"));
     }
 }
