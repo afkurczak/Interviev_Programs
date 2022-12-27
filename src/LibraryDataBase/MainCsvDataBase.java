@@ -7,7 +7,7 @@ public class MainCsvDataBase {
     public static void MainDataBase(){
         InFileDataBase db = new InFileDataBase();
 
-        Book book = new Book("Krzyżacy", "1171", LocalDate.of(1900, 7, 1), new Author("Henryk", "Sienkiewicz"));
+        Book book = new Book("Krzyżacy", "22288", LocalDate.of(1900, 7, 1), new Author("Henryk", "Sienkiewicz"));
 
         try{
             db.add(book);

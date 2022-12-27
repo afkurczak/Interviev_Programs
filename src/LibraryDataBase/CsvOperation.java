@@ -9,11 +9,11 @@ public class CsvOperation {
      static String fileName = ("DataBase.csv");
 
     public static void insert(Book book){
-        try {
-            PrintWriter write = new PrintWriter(fileName);
-            write.println("dupa");
-            write.close();
-        }catch (FileNotFoundException ex){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
+            String line = (book.getId()+","+book.getTitle()+","+book.getIsbn()+","+book.getReleaseTime()+","+book.getAuthor());
+            writer.newLine();
+            writer.write(line);
+        }catch (IOException e){
             System.out.println("File write error");
         }
     }
