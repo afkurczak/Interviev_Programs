@@ -19,14 +19,21 @@ public class CsvOperation {
     }
 
     public static void push(List<Book> books){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            for (Book book: books) {
+                String line = (book.getId() + "," + book.getTitle() + "," + book.getIsbn() + "," + book.getReleaseTime() + "," + book.getAuthor());
+                writer.newLine();
+                writer.write(line);
+            }
+        }catch (IOException e){
+            System.out.println("File write error");
+        }
 
     }
 
     public List<Book> pull (){
         List<Book> books = new ArrayList<>();
 
-        books.add(new Book(1L,"Metro 2033", "1234", LocalDate.of(1900, 7, 1),new Author("Dimitri", "Gluchowski")));
-        books.add(new Book(7L,"Władca Pierścieni tom 1", "2221", LocalDate.of(1954, 7, 29), new Author("J.R.R.", "Tolkien")));
 
         return books;
     }
