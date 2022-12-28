@@ -22,8 +22,8 @@ public class CsvOperation {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             for (Book book: books) {
                 String line = (book.getId() + "," + book.getTitle() + "," + book.getIsbn() + "," + book.getReleaseTime() + "," + book.getAuthor());
-                writer.newLine();
                 writer.write(line);
+                writer.newLine();
             }
         }catch (IOException e){
             System.out.println("File write error");

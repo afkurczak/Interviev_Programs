@@ -7,7 +7,7 @@ import java.util.List;
 public class MainCsvDataBase {
 
     public static void MainDataBase(){
-        InFileDataBase db = new InFileDataBase();
+        //InFileDataBase db = new InFileDataBase();
 
         List<Book> books = new ArrayList<>();
         books.add(new Book(1L,"Metro 2033", "1234", LocalDate.of(1900, 7, 1),new Author("Dimitri", "Gluchowski")));
