@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CsvOperation {
-     static String fileName = ("DataBase.csv");
+     static String fileName = "DataBase.csv";
 
     public static void insert(Book book){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
@@ -22,8 +22,9 @@ public class CsvOperation {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             for (Book book: books) {
                 String line = (book.getId() + "," + book.getTitle() + "," + book.getIsbn() + "," + book.getReleaseTime() + "," + book.getAuthor());
-                writer.write(line);
                 writer.newLine();
+                writer.write(line);
+
             }
         }catch (IOException e){
             System.out.println("File write error");
@@ -36,5 +37,16 @@ public class CsvOperation {
 
 
         return books;
+    }
+
+    private static void buildLine(Book book, boolean append){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, append))) {
+            String line = (book.getId()+","+book.getTitle()+","+book.getIsbn()+","+book.getReleaseTime()+","+book.getAuthor());
+            writer.newLine();
+            writer.write(line);
+        }catch (IOException e){
+            System.out.println("File write error");
+        }
+    }
     }
 }
