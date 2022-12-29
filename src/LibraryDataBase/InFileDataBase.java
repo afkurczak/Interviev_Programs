@@ -7,13 +7,16 @@ public class InFileDataBase implements DataBaseOperation{
 
     @Override
     public Long add(Book book) {
+        Long id = 1L;
         List <Book> books = new ArrayList<>();
         books.addAll(new CsvOperation().pull());
         for (Book nextBook: books) {
             if (book.getIsbn().equals(nextBook.getIsbn())) throw new IllegalArgumentException();
         }
-        Book nextBook = books.get(books.size()-1);
-        Long id = nextBook.getId()+1;
+        if (books.size() != 0){
+            Book nextBook = books.get(books.size() - 1);
+            id = nextBook.getId() + 1;
+        }
         book.setId(id);
         CsvOperation.insert(book);
         return id;

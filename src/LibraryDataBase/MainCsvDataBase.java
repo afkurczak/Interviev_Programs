@@ -7,15 +7,17 @@ import java.util.List;
 public class MainCsvDataBase {
 
     public static void MainDataBase(){
-        //InFileDataBase db = new InFileDataBase();
+        InFileDataBase db = new InFileDataBase();
+        Book book = new Book("Krzyżacy", "1171", LocalDate.of(1900, 7, 1), new Author("Henryk", "Sienkiewicz"));
 
-        List<Book> books = new ArrayList<>();
-        books.add(new Book(1L,"Metro 2033", "1234", LocalDate.of(1900, 7, 1),new Author("Dimitri", "Gluchowski")));
-        books.add(new Book(2L,"Władca Pierścieni tom 1", "2221", LocalDate.of(1954, 7, 29), new Author("J.R.R.", "Tolkien")));
+        //List<Book> books = new ArrayList<>();
+        //books.add(new Book(1L,"Metro 2033", "1234", LocalDate.of(1900, 7, 1),new Author("Dimitri", "Gluchowski")));
+        //books.add(new Book(2L,"Władca Pierścieni tom 1", "2221", LocalDate.of(1954, 7, 29), new Author("J.R.R.", "Tolkien")));
         //books.add(new Book(null, null, null, null, null));
-        CsvOperation.push(books);
+
+        //CsvOperation.push(books);
         try{
-            //db.add(books);
+            db.add(book);
         }catch (IllegalArgumentException e){
             System.out.println("ISBN Double - cannot add record");
         }
