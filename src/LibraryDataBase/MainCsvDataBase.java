@@ -11,7 +11,9 @@ import java.util.Scanner;
 public class MainCsvDataBase {
     static MainCsvDataBase db = new MainCsvDataBase();
     public static void MainDataBase(){
-        MenuDataBase();
+
+        //MenuDataBase();
+        GetByHtml.gettingHtml();
     }
 
     public static void MenuDataBase () {
