@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class MainCsvDataBase {
     static MainCsvDataBase db = new MainCsvDataBase();
+    static InFileDataBase inFileDataBase = new InFileDataBase();
     public static void MainDataBase(){
 
         MenuDataBase();
@@ -33,6 +34,8 @@ public class MainCsvDataBase {
         switch (menuKey) {
             case 1 -> add();
             case 2 -> getById();
+            case 3 -> findByIsbn();
+            case 4 -> findByAuthor();
         }
     }
 
@@ -78,8 +81,25 @@ public class MainCsvDataBase {
             System.out.println("Enter Id: ");
             Scanner scanner = new Scanner(System.in);
             Long idIn = scanner.nextLong();
-            InFileDataBase inFileDataBase = new InFileDataBase();
             System.out.println(inFileDataBase.getById(idIn));
+        }
+
+        static void findByIsbn(){
+            System.out.println("Enter ISBN: ");
+            Scanner scanner = new Scanner(System.in);
+            String isbn = scanner.nextLine();
+            System.out.println(inFileDataBase.findByIsbn(isbn));
+        }
+
+        static void findByAuthor(){
+            System.out.println("Enter author firstname: ");
+            Scanner scanner = new Scanner(System.in);
+            String firstName = scanner.nextLine();
+            System.out.println("Enter author lastname: ");
+            Scanner scanner1 = new Scanner(System.in);
+            String lastName = scanner1.nextLine();
+
+            System.out.println(inFileDataBase.findByAuthor(new Author(firstName,lastName)));
 
         }
 }
