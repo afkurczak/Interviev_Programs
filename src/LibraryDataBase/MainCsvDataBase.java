@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MainCsvDataBase {
-    static MainCsvDataBase db = new MainCsvDataBase();
     static InFileDataBase inFileDataBase = new InFileDataBase();
+    static List<Book> books = new ArrayList<>();
     public static void MainDataBase(){
 
         MenuDataBase();
@@ -99,7 +99,9 @@ public class MainCsvDataBase {
             Scanner scanner1 = new Scanner(System.in);
             String lastName = scanner1.nextLine();
 
-            System.out.println(inFileDataBase.findByAuthor(new Author(firstName,lastName)));
 
+            for (Book book: inFileDataBase.findByAuthor(new Author(firstName, lastName))) {
+                System.out.println(book);
+            }
         }
 }
