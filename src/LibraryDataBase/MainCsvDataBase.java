@@ -12,8 +12,8 @@ public class MainCsvDataBase {
     static MainCsvDataBase db = new MainCsvDataBase();
     public static void MainDataBase(){
 
-        //MenuDataBase();
-        GetByHtml.gettingHtml();
+        MenuDataBase();
+        //GetByHtml.gettingHtml();
     }
 
     public static void MenuDataBase () {
@@ -32,6 +32,7 @@ public class MainCsvDataBase {
 
         switch (menuKey) {
             case 1 -> add();
+            case 2 -> getById();
         }
     }
 
@@ -71,5 +72,14 @@ public class MainCsvDataBase {
         Book book = new Book(title,isbn,releaseDate,new Author(firstName,lastName));
         InFileDataBase inFileDataBase = new InFileDataBase();
         inFileDataBase.add(book);
+        }
+
+        static void getById (){
+            System.out.println("Enter Id: ");
+            Scanner scanner = new Scanner(System.in);
+            Long idIn = scanner.nextLong();
+            InFileDataBase inFileDataBase = new InFileDataBase();
+            System.out.println(inFileDataBase.getById(idIn));
+
         }
 }
