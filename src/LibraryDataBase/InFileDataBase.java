@@ -44,15 +44,16 @@ public class InFileDataBase implements DataBaseOperation{
 
     @Override
     public List<Book> findByAuthor(Author author) {
-        List <Book>findByAuthor = new ArrayList<>();
+        List <Book> findByAuthor = new ArrayList<>();
         List <Book> books = new ArrayList<>();
         books.addAll(new CsvOperation().pull());
         for (Book book: books) {
             if (book.getAuthor().equals(author)) findByAuthor.add(book);
-                return findByAuthor;
         }
-        return null;
+        return findByAuthor;
     }
+
+
 
     @Override
     public List<Book> findByTitle(String title) {
@@ -61,9 +62,8 @@ public class InFileDataBase implements DataBaseOperation{
         books.addAll(new CsvOperation().pull());
         for (Book book: books) {
             if (book.getTitle().equals(title)) findByTitle.add(book);
-            return findByTitle;
         }
-        return null;
+        return findByTitle;
     }
 
     @Override

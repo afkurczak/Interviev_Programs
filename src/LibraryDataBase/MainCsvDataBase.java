@@ -27,6 +27,7 @@ public class MainCsvDataBase {
         System.out.println("5. Find by Title");
         System.out.println("6. Delete by Id");
         System.out.println("7. Update by Id");
+        System.out.println("0. Exit");
 
         Scanner scanner = new Scanner(System.in);
         int menuKey = scanner.nextInt();
@@ -36,6 +37,9 @@ public class MainCsvDataBase {
             case 2 -> getById();
             case 3 -> findByIsbn();
             case 4 -> findByAuthor();
+            case 5 -> findByTitle();
+            case 6 -> deleteById();
+            case 7 -> updateById();
         }
     }
 
@@ -91,7 +95,7 @@ public class MainCsvDataBase {
             System.out.println(inFileDataBase.findByIsbn(isbn));
         }
 
-        static void findByAuthor(){
+        static void findByAuthor() {
             System.out.println("Enter author firstname: ");
             Scanner scanner = new Scanner(System.in);
             String firstName = scanner.nextLine();
@@ -100,8 +104,26 @@ public class MainCsvDataBase {
             String lastName = scanner1.nextLine();
 
 
-            for (Book book: inFileDataBase.findByAuthor(new Author(firstName, lastName))) {
+            for (Book book : inFileDataBase.findByAuthor(new Author(firstName, lastName))) {
                 System.out.println(book);
             }
         }
+
+            static void findByTitle() {
+                System.out.println("Enter Title");
+                Scanner scanner = new Scanner(System.in);
+                String title = scanner.nextLine();
+                for (Book book : inFileDataBase.findByTitle(title)) {
+                    System.out.println(book);
+                }
+            }
+
+            static void deleteById(){
+
+            }
+
+            static void updateById(){
+
+            }
 }
+
