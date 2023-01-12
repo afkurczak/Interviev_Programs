@@ -119,6 +119,9 @@ public class MainCsvDataBase {
             }
 
             static void deleteById(){
+                System.out.println("Enter ID");
+                Scanner scanner = new Scanner(System.in);
+                String title = scanner.nextLine();
 
             }
 
