@@ -2,6 +2,8 @@ package LibraryDataBase.Frame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class StartWindow extends JFrame {
     public StartWindow() {
@@ -9,6 +11,8 @@ public class StartWindow extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLocation(100, 100);
+        JPanel imagePanel = new BackgroundImage();
+        add(imagePanel);
 
         //setLayout(new GridLayout(2, 1, 10, 10));
         setLayout(new FlowLayout());
@@ -17,5 +21,15 @@ public class StartWindow extends JFrame {
         add(new JButton("Get by ID"));
 
         setVisible(true);
+    }
+
+    class ButtonAddNewBook extends JButton implements ActionListener{
+        ButtonAddNewBook(){
+            addActionListener(this);
+        }
+        @Override
+        public void actionPerformed(ActionEvent e){
+           // StartWindow.setBackground(Color.GREEN);
+        }
     }
 }
