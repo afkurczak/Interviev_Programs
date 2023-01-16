@@ -19,6 +19,7 @@ public class StartWindow extends JFrame {
         setPreferredSize(new Dimension(200,100));
         add(new JButton("Add new book"));
         add(new JButton("Get by ID"));
+        add(new JButton("Find by ISBN"));
 
         setVisible(true);
     }
