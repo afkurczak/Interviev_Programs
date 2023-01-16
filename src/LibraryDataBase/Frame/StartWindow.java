@@ -20,6 +20,8 @@ public class StartWindow extends JFrame {
         add(new JButton("Add new book"));
         add(new JButton("Get by ID"));
         add(new JButton("Find by ISBN"));
+        add(new JButton("Find by Author"));
+        add(new JButton("Find by Title"));
 
         setVisible(true);
     }
