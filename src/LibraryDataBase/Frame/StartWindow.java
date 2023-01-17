@@ -22,6 +22,8 @@ public class StartWindow extends JFrame {
         add(new JButton("Find by ISBN"));
         add(new JButton("Find by Author"));
         add(new JButton("Find by Title"));
+        add(new JButton("Delete by ID"));
+        add(new JButton("Update by ID"));
 
         setVisible(true);
     }
