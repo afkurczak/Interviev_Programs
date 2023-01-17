@@ -9,13 +9,13 @@ public class StartWindow extends JFrame {
     public StartWindow() {
         setTitle("Library Data Base");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
+        setSize(600, 480);
         setLocation(100, 100);
         setLayout(null);
 
         ImageIcon background = new ImageIcon("background.jpg");
         JLabel label = new JLabel(background);
-        label.setBounds(0, 0, 800, 600);
+        label.setBounds(100, -50, 600, 480);
         getContentPane().add(label);
 
         JButton button1 = new JButton("Add new Book");
@@ -32,7 +32,7 @@ public class StartWindow extends JFrame {
         button4.setBounds(50, 170, 200, 30);
         button5.setBounds(50, 210, 200, 30);
         button6.setBounds(50, 250, 200, 30);
-        button7.setBounds(50, 290, 100, 20);
+        button7.setBounds(50, 290, 200, 30);
 
         getContentPane().add(button1);
         getContentPane().add(button2);
@@ -42,7 +42,12 @@ public class StartWindow extends JFrame {
         getContentPane().add(button6);
         getContentPane().add(button7);
 
-        //((JPanel) getContentPane()).setOpaque(false);
-        getContentPane().setBackground(new Color(255, 255, 255, 0));
+        button1.addActionListener(e -> {
+            setVisible(false);
+            dispose();
+            new AddNewBookWindow().setVisible(true);
+        });
+
+        getContentPane().setBackground(new Color(0, 0, 0, 0));
     }
-    }
+}
