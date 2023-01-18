@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 public class StartWindow extends JFrame {
     public StartWindow() {
+
         setTitle("Library Data Base");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 480);
@@ -15,8 +16,11 @@ public class StartWindow extends JFrame {
 
         ImageIcon background = new ImageIcon("background.jpg");
         JLabel label = new JLabel(background);
-        label.setBounds(100, -50, 600, 480);
+        label.setBounds(140, -50, 600, 480);
         getContentPane().add(label);
+
+        getContentPane().setBackground(new Color(0, 0, 0, 0));
+
 
         JButton button1 = new JButton("Add new Book");
         JButton button2 = new JButton("Get by ID");
@@ -47,7 +51,6 @@ public class StartWindow extends JFrame {
             dispose();
             new AddNewBookWindow().setVisible(true);
         });
-
-        getContentPane().setBackground(new Color(0, 0, 0, 0));
     }
 }
+

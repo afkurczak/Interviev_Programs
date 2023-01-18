@@ -11,7 +11,7 @@ public class Book extends Object {
     private LocalDate releaseTime;
     private Author author;
 
-    Book(String title, String isbn, LocalDate releaseTime, Author author) {
+    public Book(String title, String isbn, LocalDate releaseTime, Author author) {
         this.title = title;
         this.isbn = isbn;
         this.releaseTime = releaseTime;
@@ -20,7 +20,7 @@ public class Book extends Object {
         if (title == null || isbn == null || releaseTime == null) throw new IllegalArgumentException();
     }
 
-    Book(Long id, String title, String isbn, LocalDate releaseTime, Author author) {
+    public Book(Long id, String title, String isbn, LocalDate releaseTime, Author author) {
         this.id = id;
         this.title = title;
         this.isbn = isbn;
