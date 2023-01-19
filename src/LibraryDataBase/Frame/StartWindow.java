@@ -51,6 +51,12 @@ public class StartWindow extends JFrame {
             dispose();
             new AddNewBookWindow().setVisible(true);
         });
+
+        button2.addActionListener(e -> {
+            setVisible(false);
+            dispose();
+            new GetByIdWindow().setVisible(true);
+        });
     }
 }
 

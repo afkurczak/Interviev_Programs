@@ -8,7 +8,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class AddNewBookWindow extends JFrame {
     private JTextField titleField;
@@ -97,9 +96,6 @@ public class AddNewBookWindow extends JFrame {
 
             inFileDataBase.add(book);
         });
-
-
-
             button2.addActionListener(e -> {
                 setVisible(false);
                 dispose();
