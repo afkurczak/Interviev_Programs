@@ -12,14 +12,13 @@ public class CsvOperation {
      static String fileName = "DataBase.csv";
 
     public static void insert(Book book){
-        buildLine(book, true);
-        /*try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
             String line = (book.getId()+","+book.getTitle()+","+book.getIsbn()+","+book.getReleaseTime()+","+book.getAuthor());
             writer.newLine();
             writer.write(line);
         }catch (IOException e){
             System.out.println("File write error");
-        }*/
+        }
     }
 
     public static void push(List<Book> books){
@@ -55,17 +54,6 @@ public class CsvOperation {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return books;
     }
-
-    private static void buildLine(Book book, Boolean append){
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, append))) {
-            String line = (book.getId()+","+book.getTitle()+","+book.getIsbn()+","+book.getReleaseTime()+","+book.getAuthor());
-            writer.write(line);
-            writer.newLine();
-        }catch (IOException e){
-            System.out.println("File write error");
-        }
-    }
-    }
+}

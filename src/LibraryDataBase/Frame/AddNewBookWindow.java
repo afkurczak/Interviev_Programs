@@ -6,18 +6,18 @@ import LibraryDataBase.InFileDataBase;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.atomic.AtomicReference;
 
-public class AddNewBookWindow extends JFrame{
+public class AddNewBookWindow extends JFrame {
     private JTextField titleField;
     private JTextField firstNameField;
     private JTextField lastNameField;
     private JTextField isbnField;
     private JTextField releaseDateField;
-    public AddNewBookWindow(){
+
+    public AddNewBookWindow() {
         setTitle("Add New Book");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 480);
@@ -56,6 +56,9 @@ public class AddNewBookWindow extends JFrame{
         releaseDateField = new JTextField();
         releaseDateField.setBounds(150, 210, 150, 30);
 
+        JLabel errorLabel = new JLabel("Write Error: Double ISBN ");
+        errorLabel.setBounds(230, 300, 200, 30);
+
         getContentPane().add(titleLabel);
         getContentPane().add(titleField);
         getContentPane().add(firstNameLabel);
@@ -76,6 +79,8 @@ public class AddNewBookWindow extends JFrame{
         getContentPane().add(button1);
         getContentPane().add(button2);
 
+        Book test = null;
+
         button1.addActionListener(e -> {
 
             String releaseDateString = releaseDateField.getText();
@@ -83,16 +88,22 @@ public class AddNewBookWindow extends JFrame{
             LocalDate releaseDate = LocalDate.parse(releaseDateString, formatter);
 
             Book book = new Book(titleField.getText(), isbnField.getText(), releaseDate, new Author(firstNameField.getText(), lastNameField.getText()));
-
             InFileDataBase inFileDataBase = new InFileDataBase();
-            inFileDataBase.add(book);
-                });
 
-        button2.addActionListener(e -> {
-            setVisible(false);
-            dispose();
-            new StartWindow().setVisible(true);
+            if (test != null) {
+                System.out.println(test);
+                getContentPane().add(errorLabel);
+            }
+
+            inFileDataBase.add(book);
         });
 
+
+
+            button2.addActionListener(e -> {
+                setVisible(false);
+                dispose();
+                new StartWindow().setVisible(true);
+            });
     }
 }
