@@ -6,6 +6,7 @@ import LibraryDataBase.InFileDataBase;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -89,12 +90,13 @@ public class AddNewBookWindow extends JFrame {
             Book book = new Book(titleField.getText(), isbnField.getText(), releaseDate, new Author(firstNameField.getText(), lastNameField.getText()));
             InFileDataBase inFileDataBase = new InFileDataBase();
 
-            if (test != null) {
-                System.out.println(test);
+            try {
+                inFileDataBase.add(book);
+            }catch(IllegalArgumentException f){
                 getContentPane().add(errorLabel);
             }
+            repaint();
 
-            inFileDataBase.add(book);
         });
             button2.addActionListener(e -> {
                 setVisible(false);
