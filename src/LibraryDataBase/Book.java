@@ -50,23 +50,23 @@ public class Book extends Object {
         this.author = author;
     }
 
-    Long getId() {
+    public Long getId() {
         return id;
     }
 
-    String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    String getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    LocalDate getReleaseTime() {
+    public LocalDate getReleaseTime() {
         return releaseTime;
     }
 
-    Author getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 

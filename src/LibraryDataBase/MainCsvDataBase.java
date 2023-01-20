@@ -1,5 +1,6 @@
 package LibraryDataBase;
 
+import LibraryDataBase.Frame.StartWindow;
 import com.sun.tools.javac.Main;
 
 import java.time.LocalDate;
@@ -7,12 +8,19 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.awt.EventQueue;
+
 
 public class MainCsvDataBase {
     static InFileDataBase inFileDataBase = new InFileDataBase();
     static List<Book> books = new ArrayList<>();
     public static void MainDataBase(){
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new StartWindow();
+            }
+        });
         LibraryDataBase.Frame.MainFrame.MainFrame();
         //MenuDataBase();
 
