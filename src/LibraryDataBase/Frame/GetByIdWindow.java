@@ -1,14 +1,11 @@
 package LibraryDataBase.Frame;
 
-import LibraryDataBase.Author;
+
 import LibraryDataBase.Book;
 import LibraryDataBase.InFileDataBase;
-
 import javax.swing.*;
 import java.awt.*;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.awt.EventQueue;
+
 
 public class GetByIdWindow extends JFrame {
     private JTextField idField;
