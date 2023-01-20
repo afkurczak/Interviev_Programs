@@ -1,18 +1,16 @@
 package LibraryDataBase.Frame;
 
-
 import LibraryDataBase.Book;
 import LibraryDataBase.InFileDataBase;
 import javax.swing.*;
 import java.awt.*;
 
+public class GetByIsbnWindow extends JFrame{
+    private JTextField isbnField;
 
-public class GetByIdWindow extends JFrame {
-    private JTextField idField;
+    public GetByIsbnWindow() {
 
-    public GetByIdWindow() {
-
-        setTitle("Get by ID");
+        setTitle("Get by ISBN");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 480);
         setLocation(100, 100);
@@ -25,25 +23,25 @@ public class GetByIdWindow extends JFrame {
 
         getContentPane().setBackground(new Color(0, 0, 0, 0));
 
-        idField = new JTextField();
-        idField.setBounds(130, 50, 100, 30);
-        getContentPane().add(idField);
+        isbnField = new JTextField();
+        isbnField.setBounds(130, 50, 100, 30);
+        getContentPane().add(isbnField);
 
-        JLabel idLabel = new JLabel("Enter ID");
+        JLabel isbnLabel = new JLabel("Enter ISBN");
         JLabel GetIdLabel = new JLabel("ID:");
         JLabel GetTitleLabel = new JLabel("Title:");
         JLabel GetIsbnLabel = new JLabel("ISBN:");
         JLabel GetAuthorLabel = new JLabel("Author:");
         JLabel GetReleaseLabel = new JLabel("Release Date:");
 
-        idLabel.setBounds(50, 50, 150, 30);
+        isbnLabel.setBounds(50, 50, 150, 30);
         GetIdLabel.setBounds(50, 80, 100, 30);
         GetTitleLabel.setBounds(50, 100, 100, 30);
         GetIsbnLabel.setBounds(50, 120, 100, 30);
         GetAuthorLabel.setBounds(50, 140, 100, 30);
         GetReleaseLabel.setBounds(50, 160, 100, 30);
 
-        getContentPane().add(idLabel);
+        getContentPane().add(isbnLabel);
         getContentPane().add(GetIdLabel);
         getContentPane().add(GetTitleLabel);
         getContentPane().add(GetAuthorLabel);
@@ -62,7 +60,7 @@ public class GetByIdWindow extends JFrame {
         button1.addActionListener(e -> {
 
             InFileDataBase inFileDataBase = new InFileDataBase();
-            Book book = inFileDataBase.getById(Long.parseLong(String.valueOf(idField.getText())));
+            Book book = inFileDataBase.findByIsbn(String.valueOf(isbnField.getText()));
 
             JLabel GetIdValue = new JLabel(book.getId().toString());
             JLabel GetTitleValue = new JLabel(book.getTitle());
@@ -93,3 +91,5 @@ public class GetByIdWindow extends JFrame {
 
     }
 }
+
+
