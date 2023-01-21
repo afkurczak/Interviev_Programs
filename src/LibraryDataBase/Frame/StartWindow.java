@@ -64,6 +64,12 @@ public class StartWindow extends JFrame {
             dispose();
             new GetByIsbnWindow().setVisible(true);
         });
+
+        button3.addActionListener(e -> {
+            setVisible(false);
+            dispose();
+            new FindByTitle().setVisible(true);
+        });
     }
 }
 
